@@ -24,5 +24,11 @@
     "vite": "^4.0.0",
     "vite-imagetools": "^4.0.14"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@fontsource/arapey": "^4.5.9",
+    "@fontsource/bebas-neue": "^4.5.9",
+    "@fontsource/merriweather": "^4.5.14",
+    "@fontsource/old-standard-tt": "^4.5.9"
+  }
 }
