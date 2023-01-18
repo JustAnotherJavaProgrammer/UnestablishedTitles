@@ -11,9 +11,12 @@ const config = {
     vitePreprocess(),
     preprocess({
       postcss: true,
-    }),
+    })
   ],
-
+  onwarn: (warning, handler) => {
+    if (warning.code === "css-unused-selector") return;
+    handler(warning);
+  },
   kit: {
     paths: {
       base: env.BASE_PATH ? env.BASE_PATH : "",

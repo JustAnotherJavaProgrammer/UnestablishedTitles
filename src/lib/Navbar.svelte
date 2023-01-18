@@ -17,7 +17,9 @@
     </div>
 </nav>
 
-<style>
+<style lang="scss">
+    @import "/src/styles.scss";
+
     .black a,
     .black {
         color: black;
@@ -29,7 +31,7 @@
         justify-content: center;
         align-items: center;
         padding-top: 1rem;
-        font-family: "Bebas Neue", sans-serif;
+        @include font-display-sans;
         letter-spacing: 0.075rem;
         text-transform: uppercase;
         width: 100%;
@@ -63,7 +65,7 @@
     }
 
     #rootlink {
-        font-family: "Old Standard TT", serif;
+        @include font-heading-serif;
         letter-spacing: normal;
         font-size: 1.375rem;
         vertical-align: bottom;

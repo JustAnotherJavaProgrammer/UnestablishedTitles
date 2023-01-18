@@ -14,11 +14,14 @@
     </div>
 </header>
 
-<style>
+<style lang="scss">
+    @import "/src/styles.scss";
+
     header {
         height: 100vh;
         width: 100%;
         color: white;
+        @include font-heading-serif;
     }
 
     #container {
@@ -50,7 +53,7 @@
     p {
         margin: 1em;
         font-size: 1.75em;
-        font-family: "Bebas Neue", sans-serif;
+        @include font-display-sans;
         letter-spacing: 0.075em;
         text-transform: uppercase;
     }

@@ -16,6 +16,7 @@
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
     "postcss-load-config": "^4.0.1",
+    "sass": "^1.57.1",
     "svelte": "^3.54.0",
     "svelte-check": "^2.9.2",
     "svelte-preprocess": "^4.10.7",
@@ -28,6 +29,7 @@
   "dependencies": {
     "@fontsource/arapey": "^4.5.9",
     "@fontsource/bebas-neue": "^4.5.9",
+    "@fontsource/libre-baskerville": "^4.5.10",
     "@fontsource/merriweather": "^4.5.14",
     "@fontsource/old-standard-tt": "^4.5.9"
   }
