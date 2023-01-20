@@ -3,13 +3,13 @@
     import "@fontsource/old-standard-tt/400.css";
     import "@fontsource/bebas-neue/400.css";
     import "@fontsource/libre-baskerville/400.css";
-    // import SaleBanner from "$lib/SaleBanner.svelte";
+    import SaleBanner from "$lib/SaleBanner.svelte";
 </script>
 
 <head>
     <title>Unestablished Titles</title>
 </head>
-<!-- <SaleBanner /> -->
+<SaleBanner />
 <slot />
 
 <style global lang="scss">
