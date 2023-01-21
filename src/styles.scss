@@ -11,5 +11,9 @@ $green: #566E3D;
 }
 
 @mixin font-text-serif {
-    font-family: "Libre Baskerville", serif;
+    font-family: "Crimson Text", serif;
+}
+
+@mixin font-text-fancy {
+    font-family: "Almendra", serif;
 }

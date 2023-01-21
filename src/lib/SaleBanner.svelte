@@ -6,7 +6,7 @@
 </script>
 
 <a href={href}>
-    ${!building ? currentYear : "Everyday"} sale. Up to <slot>∞%</slot> OFF + FREE grift!
+    ${!building ? currentYear : "Everyday"} Sale. Up to <slot>&infin;%</slot> OFF + FREE grift!
     <i>Claim your offer!</i>
     (Most Useless Gift {!building ? `of ${currentYear}` : "ever"} 🤣)
 </a>
@@ -24,6 +24,7 @@
         font-weight: bold;
         padding: 0.5em;
         text-align: center;
+        text-decoration: none;
     }
 
     a:hover {
