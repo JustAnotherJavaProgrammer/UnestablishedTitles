@@ -59,6 +59,14 @@
         <svelte:fragment slot="title">Available Title Packs</svelte:fragment>
         <HotizontalDivider />
     </ParagraphSerif>
+    <!-- TODO: links with zoom-in images to the individual title packs -->
+    <ParagraphSerif>
+        <svelte:fragment slot="title">Each pack contains:</svelte:fragment>
+        One automatically generated certificate of your preferred form of address, in the form of a printable PDF file. Nothing less, nothing more.
+        <br>
+        The intention of these packs is to provide a fun, novelty product for those who want to get something a little different for themselves, friends or family, all while simultaneously not feeling the need to pretend to protect woodlands in Ireland.
+    </ParagraphSerif>
+    <!-- TODO: Testimonials -->
 </SiteColumn>
 
 <h1>Welcome to SvelteKit</h1>

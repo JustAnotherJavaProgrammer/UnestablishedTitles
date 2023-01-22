@@ -8,11 +8,12 @@
     // import SaleBanner from "$lib/SaleBanner.svelte";
 </script>
 
-<head>
+<svelte:head>
     <title>Unestablished Titles</title>
-</head>
+</svelte:head>
 <!-- <SaleBanner href="/"/> -->
 <slot />
+<!-- TODO: footer -->
 
 <style global lang="scss">
     @import "/src/styles.scss";
