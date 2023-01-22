@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import HeadingSerif from "./HeadingSerif.svelte";
     let content: HTMLParagraphElement;
 
     onMount(() => {
@@ -10,7 +11,7 @@
 </script>
 
 <section>
-    <h1><slot name="title">This is the title of your paragraph</slot></h1>
+    <HeadingSerif><slot name="title">This is the title of your paragraph</slot></HeadingSerif>
     <p bind:this={content}>
         <slot>Serif text can be placed here. This is a very unique opportunity to create your own content.</slot>
     </p>
@@ -22,17 +23,14 @@
     section {
         @include font-text-serif;
         padding: 0;
-        margin: 1em;
-        max-width: 680px;
+        margin: 0;
+        max-width: clamp(370px, 66.66%, 680px);
         text-align: center;
     }
 
     p {
         line-height: 1.75em;
-    }
-
-    h1 {
-        @include font-heading-serif;
-        font-size: 2em;
+        margin: 0;
+        padding: 0;
     }
 </style>

@@ -30,12 +30,14 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        box-sizing: border-box;
         padding-top: 1rem;
+        padding-inline: 1rem;
         @include font-display-sans;
         letter-spacing: 0.075rem;
         text-transform: uppercase;
         width: 100%;
-        max-width: 1050px;
+        max-width: calc(1050px + 2 * 1rem);
     }
 
     #container {
