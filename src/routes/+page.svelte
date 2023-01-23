@@ -5,8 +5,12 @@
     import HotizontalDivider from "$lib/HotizontalDivider.svelte";
     import Italics from "$lib/Italics.svelte";
     import Navbar from "$lib/Navbar.svelte";
+    import PackPreview from "$lib/PackPreview.svelte";
     import ParagraphSerif from "$lib/ParagraphSerif.svelte";
     import SiteColumn from "$lib/SiteColumn.svelte";
+    import WideColumn from "$lib/WideColumn.svelte";
+
+    import IrishMenPack from "$lib/assets/img/pack_thumbnails/patrick-metzdorf-xyQnsGRmeNQ-unsplash.jpg";
 </script>
 
 <Header>
@@ -60,6 +64,9 @@
         <HotizontalDivider />
     </ParagraphSerif>
     <!-- TODO: links with zoom-in images to the individual title packs -->
+    <WideColumn>
+        <PackPreview src={IrishMenPack} alt="Giant's Causeway"/>
+    </WideColumn>
     <ParagraphSerif>
         <svelte:fragment slot="title">Each pack contains:</svelte:fragment>
         One automatically generated certificate of your preferred form of address, in the form of a printable PDF file. Nothing less, nothing more.
