@@ -11,6 +11,7 @@
     import WideColumn from "$lib/WideColumn.svelte";
 
     import IrishMenPack from "$lib/assets/img/pack_thumbnails/patrick-metzdorf-xyQnsGRmeNQ-unsplash.jpg";
+    import IrishWomenPack from "$lib/assets/img/pack_thumbnails/aldo-de-la-paz-d6u2_u02FIo-unsplash.jpg";
 </script>
 
 <Header>
@@ -65,13 +66,22 @@
     </ParagraphSerif>
     <!-- TODO: links with zoom-in images to the individual title packs -->
     <WideColumn>
-        <PackPreview src={IrishMenPack} alt="Giant's Causeway"/>
+        <PackPreview src={IrishMenPack} alt="Giant's Causeway">
+            <svelte:fragment slot="name">Lordship Pack</svelte:fragment>
+        </PackPreview>
     </WideColumn>
+    <WideColumn>
+        <PackPreview src={IrishWomenPack} alt="Castle On The Hill">
+            <svelte:fragment slot="name">Ladyship Pack</svelte:fragment>
+        </PackPreview>
+    </WideColumn>
+
     <ParagraphSerif>
         <svelte:fragment slot="title">Each pack contains:</svelte:fragment>
         One automatically generated certificate of your preferred form of address, in the form of a printable PDF file. Nothing less, nothing more.
-        <br>
-        The intention of these packs is to provide a fun, novelty product for those who want to get something a little different for themselves, friends or family, all while simultaneously not feeling the need to pretend to protect woodlands in Ireland.
+        <br />
+        The intention of these packs is to provide a fun, novelty product for those who want to get something a little different for themselves, friends or family, all while simultaneously
+        not feeling the need to pretend to protect woodlands in Ireland.
     </ParagraphSerif>
     <!-- TODO: Testimonials -->
 </SiteColumn>

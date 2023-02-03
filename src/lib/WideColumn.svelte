@@ -5,6 +5,7 @@
 <style lang="scss">
     section {
         max-width: 1050px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: stretch;
