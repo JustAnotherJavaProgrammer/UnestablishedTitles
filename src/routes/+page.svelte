@@ -11,7 +11,23 @@
     import WideColumn from "$lib/WideColumn.svelte";
 
     import IrishMenPack from "$lib/assets/img/pack_thumbnails/patrick-metzdorf-xyQnsGRmeNQ-unsplash.jpg";
+    // @ts-ignore
+    import IrishMenPack_srcset from "$lib/assets/img/pack_thumbnails/patrick-metzdorf-xyQnsGRmeNQ-unsplash.jpg?w=500;900;1200&webp&srcset";
     import IrishWomenPack from "$lib/assets/img/pack_thumbnails/aldo-de-la-paz-d6u2_u02FIo-unsplash.jpg";
+    // @ts-ignore
+    import IrishWomenPack_srcset from "$lib/assets/img/pack_thumbnails/aldo-de-la-paz-d6u2_u02FIo-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import IrishCouplePack from "$lib/assets/img/pack_thumbnails/ainars-djatlevskis-gJQLVTyQfgQ-unsplash.jpg";
+    // @ts-ignore
+    import IrishCouplePack_srcset from "$lib/assets/img/pack_thumbnails/ainars-djatlevskis-gJQLVTyQfgQ-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import EnglishNobilityManPack from "$lib/assets/img/pack_thumbnails/yaopey-yong-flmPTUCjkto-unsplash.jpg";
+    // @ts-ignore
+    import EnglishNobilityManPack_srcset from "$lib/assets/img/pack_thumbnails/yaopey-yong-flmPTUCjkto-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import EnglishNobilityWomanPack from "$lib/assets/img/pack_thumbnails/neil-cartwright---kJ_2yCBPw-unsplash.jpg";
+    // @ts-ignore
+    import EnglishNobilityWomanPack_srcset from "$lib/assets/img/pack_thumbnails/neil-cartwright---kJ_2yCBPw-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import EnglishNobilityCouplePack from "$lib/assets/img/pack_thumbnails/52064110244_977f657bbb_o.jpg";
+    // @ts-ignore
+    import EnglishNobilityCouplePack_srcset from "$lib/assets/img/pack_thumbnails/52064110244_977f657bbb_o.jpg?w=500;900;1200&webp&srcset";
 </script>
 
 <Header>
@@ -64,15 +80,37 @@
         <svelte:fragment slot="title">Available Title Packs</svelte:fragment>
         <HotizontalDivider />
     </ParagraphSerif>
-    <!-- TODO: links with zoom-in images to the individual title packs -->
+    <!-- links with zoom-in images to the individual title packs -->
     <WideColumn>
-        <PackPreview src={IrishMenPack} alt="Giant's Causeway">
+        <PackPreview src={IrishMenPack} srcset={IrishMenPack_srcset} alt="Giant's Causeway">
             <svelte:fragment slot="name">Lordship Pack</svelte:fragment>
         </PackPreview>
     </WideColumn>
     <WideColumn>
-        <PackPreview src={IrishWomenPack} alt="Castle On The Hill">
+        <PackPreview src={IrishWomenPack} srcset={IrishWomenPack_srcset} alt="Castle On The Hill">
             <svelte:fragment slot="name">Ladyship Pack</svelte:fragment>
+        </PackPreview>
+    </WideColumn>
+    <WideColumn>
+        <PackPreview src={IrishCouplePack} srcset={IrishCouplePack_srcset} alt="Donegal, Ireland">
+            <svelte:fragment slot="name">Couple Title Pack (Lord/Lady)</svelte:fragment>
+        </PackPreview>
+    </WideColumn>
+
+    <WideColumn>
+        <PackPreview src={EnglishNobilityManPack} srcset={EnglishNobilityManPack_srcset} alt="Westminister Palace in the evening">
+            <svelte:fragment slot="name">Sir Title Pack</svelte:fragment>
+        </PackPreview>
+    </WideColumn>
+    <WideColumn>
+        <PackPreview src={EnglishNobilityWomanPack} srcset={EnglishNobilityWomanPack_srcset} alt="Buckingham Palace">
+            <svelte:fragment slot="name">Dame Title Pack</svelte:fragment>
+        </PackPreview>
+    </WideColumn>
+    <WideColumn>
+        <PackPreview src={EnglishNobilityCouplePack} srcset={EnglishNobilityCouplePack_srcset} alt="The Queen's Speech 2022">
+            <svelte:fragment slot="name">Couple Title Pack (Sir/Dame)</svelte:fragment>
+            <svelte:fragment slot="tagline">Photo: Copyright House of Lords 2022 / Photography by Annabel Moeller</svelte:fragment>
         </PackPreview>
     </WideColumn>
 
