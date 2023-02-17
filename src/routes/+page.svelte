@@ -28,6 +28,15 @@
     import EnglishNobilityCouplePack from "$lib/assets/img/pack_thumbnails/52064110244_977f657bbb_o.jpg";
     // @ts-ignore
     import EnglishNobilityCouplePack_srcset from "$lib/assets/img/pack_thumbnails/52064110244_977f657bbb_o.jpg?w=500;900;1200&webp&srcset";
+    import MasterPack from "$lib/assets/img/pack_thumbnails/adam-kring-uqCMurxrzZc-unsplash.jpg";
+    // @ts-ignore
+    import MasterPack_srcset from "$lib/assets/img/pack_thumbnails/adam-kring-uqCMurxrzZc-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import MistressPack from "$lib/assets/img/pack_thumbnails/nick-fewings-xqlkl3AT7PU-unsplash.jpg";
+    // @ts-ignore
+    import MistressPack_srcset from "$lib/assets/img/pack_thumbnails/nick-fewings-xqlkl3AT7PU-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import MasterCouplePack from "$lib/assets/img/pack_thumbnails/bruno-martins-GkZvxVsHYWw-unsplash.jpg";
+    // @ts-ignore
+    import MasterCouplePack_srcset from "$lib/assets/img/pack_thumbnails/bruno-martins-GkZvxVsHYWw-unsplash.jpg?w=500;900;1200&webp&srcset";
 </script>
 
 <Header>
@@ -114,12 +123,33 @@
         </PackPreview>
     </WideColumn>
 
+    <WideColumn>
+        <PackPreview src={MasterPack} srcset={MasterPack_srcset} alt="A plantation house in South Carolina">
+            <svelte:fragment slot="name">Master Pack</svelte:fragment>
+        </PackPreview>
+    </WideColumn>
+    <WideColumn>
+        <PackPreview src={MistressPack} srcset={MistressPack_srcset} alt="Crichel House, Dorset, from across the lake, in the wonderful Dorset countryside.">
+            <svelte:fragment slot="name">Mistress Pack</svelte:fragment>
+        </PackPreview>
+    </WideColumn>
+    <WideColumn>
+        <PackPreview src={MasterCouplePack} srcset={MasterCouplePack} alt="Kynance Mews, London, UK">
+            <svelte:fragment slot="name">Couple Title Pack (Master/Mistress)</svelte:fragment>
+        </PackPreview>
+    </WideColumn>
+
     <ParagraphSerif>
         <svelte:fragment slot="title">Each pack contains:</svelte:fragment>
         One automatically generated certificate of your preferred form of address, in the form of a printable PDF file. Nothing less, nothing more.
         <br />
         The intention of these packs is to provide a fun, novelty product for those who want to get something a little different for themselves, friends or family, all while simultaneously
         not feeling the need to pretend to protect woodlands in Ireland.
+    </ParagraphSerif>
+
+    <ParagraphSerif>
+        <svelte:fragment slot="title">Testimonials</svelte:fragment>
+        <Italics>*Please note that images below may be illustrative only and text may be fictitious</Italics>
     </ParagraphSerif>
     <!-- TODO: Testimonials -->
 </SiteColumn>
