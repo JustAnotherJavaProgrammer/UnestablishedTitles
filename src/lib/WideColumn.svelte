@@ -10,5 +10,6 @@
         flex-direction: column;
         align-items: stretch;
         justify-content: flex-start;
+        gap: 3.75rem;
     }
 </style>

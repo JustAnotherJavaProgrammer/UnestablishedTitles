@@ -37,6 +37,8 @@
     import MasterCouplePack from "$lib/assets/img/pack_thumbnails/bruno-martins-GkZvxVsHYWw-unsplash.jpg";
     // @ts-ignore
     import MasterCouplePack_srcset from "$lib/assets/img/pack_thumbnails/bruno-martins-GkZvxVsHYWw-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import Testimonial from "$lib/Testimonial.svelte";
+    import GapReducer from "$lib/GapReducer.svelte";
 </script>
 
 <Header>
@@ -89,51 +91,34 @@
         <svelte:fragment slot="title">Available Title Packs</svelte:fragment>
         <HotizontalDivider />
     </ParagraphSerif>
+    <GapReducer />
     <!-- links with zoom-in images to the individual title packs -->
     <WideColumn>
         <PackPreview src={IrishMenPack} srcset={IrishMenPack_srcset} alt="Giant's Causeway">
             <svelte:fragment slot="name">Lordship Pack</svelte:fragment>
         </PackPreview>
-    </WideColumn>
-    <WideColumn>
         <PackPreview src={IrishWomenPack} srcset={IrishWomenPack_srcset} alt="Castle On The Hill">
             <svelte:fragment slot="name">Ladyship Pack</svelte:fragment>
         </PackPreview>
-    </WideColumn>
-    <WideColumn>
         <PackPreview src={IrishCouplePack} srcset={IrishCouplePack_srcset} alt="Donegal, Ireland">
             <svelte:fragment slot="name">Couple Title Pack (Lord/Lady)</svelte:fragment>
         </PackPreview>
-    </WideColumn>
-
-    <WideColumn>
         <PackPreview src={EnglishNobilityManPack} srcset={EnglishNobilityManPack_srcset} alt="Westminister Palace in the evening">
             <svelte:fragment slot="name">Sir Title Pack</svelte:fragment>
         </PackPreview>
-    </WideColumn>
-    <WideColumn>
         <PackPreview src={EnglishNobilityWomanPack} srcset={EnglishNobilityWomanPack_srcset} alt="Buckingham Palace">
             <svelte:fragment slot="name">Dame Title Pack</svelte:fragment>
         </PackPreview>
-    </WideColumn>
-    <WideColumn>
         <PackPreview src={EnglishNobilityCouplePack} srcset={EnglishNobilityCouplePack_srcset} alt="The Queen's Speech 2022">
             <svelte:fragment slot="name">Couple Title Pack (Sir/Dame)</svelte:fragment>
             <svelte:fragment slot="tagline">Photo: Copyright House of Lords 2022 / Photography by Annabel Moeller</svelte:fragment>
         </PackPreview>
-    </WideColumn>
-
-    <WideColumn>
         <PackPreview src={MasterPack} srcset={MasterPack_srcset} alt="A plantation house in South Carolina">
             <svelte:fragment slot="name">Master Pack</svelte:fragment>
         </PackPreview>
-    </WideColumn>
-    <WideColumn>
         <PackPreview src={MistressPack} srcset={MistressPack_srcset} alt="Crichel House, Dorset, from across the lake, in the wonderful Dorset countryside.">
             <svelte:fragment slot="name">Mistress Pack</svelte:fragment>
         </PackPreview>
-    </WideColumn>
-    <WideColumn>
         <PackPreview src={MasterCouplePack} srcset={MasterCouplePack} alt="Kynance Mews, London, UK">
             <svelte:fragment slot="name">Couple Title Pack (Master/Mistress)</svelte:fragment>
         </PackPreview>
@@ -149,9 +134,13 @@
 
     <ParagraphSerif>
         <svelte:fragment slot="title">Testimonials</svelte:fragment>
-        <Italics>*Please note that images below may be illustrative only and text may be fictitious</Italics>
+        <Italics>*Please note that images below may be illustrative only and text may be completely fictitious</Italics>
     </ParagraphSerif>
+    <GapReducer />
     <!-- TODO: Testimonials -->
+    <WideColumn>
+        <Testimonial>Some text</Testimonial>
+    </WideColumn>
 </SiteColumn>
 
 <h1>Welcome to SvelteKit</h1>
