@@ -1,14 +1,16 @@
 <script>
     import { building } from "$app/environment";
-    import Header from "$lib/Header.svelte";
-    import HeadingSerif from "$lib/HeadingSerif.svelte";
-    import HotizontalDivider from "$lib/HotizontalDivider.svelte";
-    import Italics from "$lib/Italics.svelte";
-    import Navbar from "$lib/Navbar.svelte";
-    import PackPreview from "$lib/PackPreview.svelte";
-    import ParagraphSerif from "$lib/ParagraphSerif.svelte";
-    import SiteColumn from "$lib/SiteColumn.svelte";
-    import WideColumn from "$lib/WideColumn.svelte";
+    import Header from "$lib/elements/Header.svelte";
+    import HotizontalDivider from "$lib/elements/HotizontalDivider.svelte";
+    import Italics from "$lib/layout/Italics.svelte";
+    import Navbar from "$lib/elements/Navbar.svelte";
+    import PackPreview from "$lib/elements/PackPreview.svelte";
+    import ParagraphSerif from "$lib/layout/ParagraphSerif.svelte";
+    import SiteColumn from "$lib/layout/SiteColumn.svelte";
+    import WideColumn from "$lib/layout/WideColumn.svelte";
+    import Testimonial from "$lib/elements/Testimonial.svelte";
+    import GapReducer from "$lib/layout/GapReducer.svelte";
+    import GapReducerSmall from "$lib/layout/GapReducerSmall.svelte";
 
     import IrishMenPack from "$lib/assets/img/pack_thumbnails/patrick-metzdorf-xyQnsGRmeNQ-unsplash.jpg";
     // @ts-ignore
@@ -44,10 +46,6 @@
     import TestimonialTinder from "$lib/assets/img/testimonials/IMG_0836.jpg";
     // @ts-ignore
     import TestimonialTinder_srcset from "$lib/assets/img/testimonials/IMG_0836.jpg?w=500;900;1200&webp&srcset";
-
-    import Testimonial from "$lib/Testimonial.svelte";
-    import GapReducer from "$lib/GapReducer.svelte";
-    import GapReducerSmall from "$lib/GapReducerSmall.svelte";
 </script>
 
 <Header>
@@ -182,4 +180,3 @@
     </WideColumn>
     <HotizontalDivider />
 </SiteColumn>
-Footer:
