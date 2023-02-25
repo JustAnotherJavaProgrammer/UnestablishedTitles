@@ -5,7 +5,7 @@
     import "@fontsource/bebas-neue/400.css";
     import "@fontsource/crimson-text/400.css";
     import "@fontsource/almendra/400.css";
-    import "@fontsource/roboto/400.css"
+    import "@fontsource/roboto/400.css";
     // import SaleBanner from "$lib/SaleBanner.svelte";
 </script>
 
@@ -14,8 +14,8 @@
 </svelte:head>
 <!-- <SaleBanner href="/"/> -->
 <slot />
-<!-- TODO: footer -->
 
+<!-- TODO: footer -->
 <style global lang="scss">
     @import "/src/styles.scss";
 

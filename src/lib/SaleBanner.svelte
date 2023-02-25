@@ -6,7 +6,7 @@
 </script>
 
 <a href={href}>
-    ${!building ? currentYear : "Everyday"} Sale. Up to <slot>&infin;%</slot> OFF + FREE grift!
+    {!building ? currentYear : "Everyday"} Sale. Up to <slot>&infin;%</slot> OFF + FREE grift!
     <i>Claim your offer!</i>
     (Most Useless Gift {!building ? `of ${currentYear}` : "ever"} 🤣)
 </a>
