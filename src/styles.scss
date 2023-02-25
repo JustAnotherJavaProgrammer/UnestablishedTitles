@@ -3,16 +3,22 @@ $blue: #6457A6;
 $green: #566E3D;
 $off-white: #ebebeb;
 
+$breakpoint-md: 768px;
+
 @mixin font-heading-serif {
     font-family: "Old Standard TT", serif;
+}
+
+@mixin font-text-serif {
+    font-family: "Crimson Text", serif;
 }
 
 @mixin font-display-sans {
     font-family: "Bebas Neue", sans-serif;
 }
 
-@mixin font-text-serif {
-    font-family: "Crimson Text", serif;
+@mixin font-text-sans {
+    font-family: "Roboto", sans-serif;
 }
 
 @mixin font-text-fancy {

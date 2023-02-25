@@ -30,6 +30,7 @@
     "@fontsource/almendra": "^4.5.10",
     "@fontsource/bebas-neue": "^4.5.9",
     "@fontsource/crimson-text": "^4.5.5",
-    "@fontsource/old-standard-tt": "^4.5.9"
+    "@fontsource/old-standard-tt": "^4.5.9",
+    "@fontsource/roboto": "^4.5.8"
   }
 }

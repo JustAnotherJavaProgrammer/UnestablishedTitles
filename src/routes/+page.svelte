@@ -37,8 +37,17 @@
     import MasterCouplePack from "$lib/assets/img/pack_thumbnails/bruno-martins-GkZvxVsHYWw-unsplash.jpg";
     // @ts-ignore
     import MasterCouplePack_srcset from "$lib/assets/img/pack_thumbnails/bruno-martins-GkZvxVsHYWw-unsplash.jpg?w=500;900;1200&webp&srcset";
+
+    import TestimonialPassport from "$lib/assets/img/testimonials/nicole-geri-gMJ3tFOLvnA-unsplash.jpg";
+    // @ts-ignore
+    import TestimonialPassport_srcset from "$lib/assets/img/testimonials/nicole-geri-gMJ3tFOLvnA-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import TestimonialTinder from "$lib/assets/img/testimonials/IMG_0836.jpg";
+    // @ts-ignore
+    import TestimonialTinder_srcset from "$lib/assets/img/testimonials/IMG_0836.jpg?w=500;900;1200&webp&srcset";
+
     import Testimonial from "$lib/Testimonial.svelte";
     import GapReducer from "$lib/GapReducer.svelte";
+    import GapReducerSmall from "$lib/GapReducerSmall.svelte";
 </script>
 
 <Header>
@@ -119,7 +128,7 @@
         <PackPreview src={MistressPack} srcset={MistressPack_srcset} alt="Crichel House, Dorset, from across the lake, in the wonderful Dorset countryside.">
             <svelte:fragment slot="name">Mistress Pack</svelte:fragment>
         </PackPreview>
-        <PackPreview src={MasterCouplePack} srcset={MasterCouplePack} alt="Kynance Mews, London, UK">
+        <PackPreview src={MasterCouplePack} srcset={MasterCouplePack_srcset} alt="Kynance Mews, London, UK">
             <svelte:fragment slot="name">Couple Title Pack (Master/Mistress)</svelte:fragment>
         </PackPreview>
     </WideColumn>
@@ -132,6 +141,10 @@
         not feeling the need to pretend to protect woodlands in Ireland.
     </ParagraphSerif>
 
+    <GapReducerSmall />
+    <HotizontalDivider />
+    <GapReducerSmall />
+
     <ParagraphSerif>
         <svelte:fragment slot="title">Testimonials</svelte:fragment>
         <Italics>*Please note that images below may be illustrative only and text may be completely fictitious</Italics>
@@ -139,10 +152,34 @@
     <GapReducer />
     <!-- TODO: Testimonials -->
     <WideColumn>
-        <Testimonial>Some text</Testimonial>
+        <Testimonial>
+            Decided to surprise my husband, whilst out for the first time since The Event in order to celebrate our 4th wedding anniversary, with a Lordship. Decided to treat
+            myself to a Ladyship at the same time. After all, I couldn't have one of Them lording over me. Anyway, I am the true Lady of the shelter ha ha ha ha. Splendid.
+        </Testimonial>
+        <Testimonial src={TestimonialPassport} srcset={TestimonialPassport_srcset} alt="A passport with plane tickets inside.">
+            Since purchasing two certificates for me and my wife, I have noticed a real difference in service and the level of etiquette shown toward us. I have had a few laughs
+            from friends and family about me being a Sir, but it is a great novelty and one that comes with some rewards. I am happy to call my wife, my Dame, and glad I
+            purchased these certificates.
+        </Testimonial>
+        <Testimonial>
+            My father used to be a police officer, but he recently retired. However, I thought it would be a fun tribute to his career and a cool Father's Day gift to make him a
+            Sir. It was a big hit with him. He told us that he would keep it informal; curtsying was not required unless I brought home a black boyfriend. I made my mother a
+            Dame for her birthday to keep the power dynamic in the house. (LOL)
+        </Testimonial>
+        <Testimonial
+            src={TestimonialTinder}
+            srcset={TestimonialTinder_srcset}
+            alt={`The Tinder profile page of Master Christian, 27. It has listed "Chief Executive Officer" as his occupation. ` +
+                `He went to Harvard University and is currently 2 miles away. His description says: ` +
+                `"Exercising control in all things; And yes, really, I'm looking for my Mistress.", followed by the "wink" emoji.`}
+            imgBottom
+        >
+            My husband is thrilled with his gift! Since I gave it to him, he will pull out his "Master" status to get out of any chore I ask him to do!! It's become such a fun
+            part of our family. I will yell, "Jeremy, can you take out the trash?" And he will reply, "A Mistress takes out the trash for her Master!!" This has brought our
+            family great happiness and our daughters will have many memories of their father being the "Master of the house"!
+        </Testimonial>
+        <Testimonial>I have it framed on my bathroom wall. My Irish American heritage makes me proud to display the certificate on the wall of the bathroom.</Testimonial>
     </WideColumn>
+    <HotizontalDivider />
 </SiteColumn>
-
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<a href="https://www.gov.ie/en/publication/57d2a-forestry-facts-and-news/#forestry-facts-and-news">Facts about forests</a>
+Footer:

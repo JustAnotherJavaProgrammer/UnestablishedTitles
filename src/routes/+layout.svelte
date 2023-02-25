@@ -5,6 +5,7 @@
     import "@fontsource/bebas-neue/400.css";
     import "@fontsource/crimson-text/400.css";
     import "@fontsource/almendra/400.css";
+    import "@fontsource/roboto/400.css"
     // import SaleBanner from "$lib/SaleBanner.svelte";
 </script>
 
@@ -22,5 +23,6 @@
         @include font-text-serif;
         padding: 0;
         margin: 0;
+        scroll-behavior: smooth;
     }
 </style>
