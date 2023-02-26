@@ -7,10 +7,10 @@
     <div class="content-column">
         <FooterSection
             links={[
-                { text: "Imprint", href: "#" },
-                { text: "Privacy Policy", href: "#" },
-                { text: "Impressum", href: "#" },
-                { text: "Datenschutzerklärung", href: "#" },
+                { text: "Imprint", href: "/legal/imprint" },
+                { text: "Privacy Policy", href: "/legal/privacypolicy" },
+                { text: "Impressum", href: "/legal/impressum" },
+                { text: "Datenschutzerklärung", href: "/legal/datenschutzerklaerung" },
             ]}><svelte:fragment slot="title">Legal</svelte:fragment></FooterSection
         >
     </div>

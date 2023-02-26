@@ -14,38 +14,38 @@
 
     import IrishMenPack from "$lib/assets/img/pack_thumbnails/patrick-metzdorf-xyQnsGRmeNQ-unsplash.jpg";
     // @ts-ignore
-    import IrishMenPack_srcset from "$lib/assets/img/pack_thumbnails/patrick-metzdorf-xyQnsGRmeNQ-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import IrishMenPack_srcset from "$lib/assets/img/pack_thumbnails/patrick-metzdorf-xyQnsGRmeNQ-unsplash.jpg?w=500;900;1200;2000&webp&srcset";
     import IrishWomenPack from "$lib/assets/img/pack_thumbnails/aldo-de-la-paz-d6u2_u02FIo-unsplash.jpg";
     // @ts-ignore
-    import IrishWomenPack_srcset from "$lib/assets/img/pack_thumbnails/aldo-de-la-paz-d6u2_u02FIo-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import IrishWomenPack_srcset from "$lib/assets/img/pack_thumbnails/aldo-de-la-paz-d6u2_u02FIo-unsplash.jpg?w=500;900;1200;2000&webp&srcset";
     import IrishCouplePack from "$lib/assets/img/pack_thumbnails/ainars-djatlevskis-gJQLVTyQfgQ-unsplash.jpg";
     // @ts-ignore
-    import IrishCouplePack_srcset from "$lib/assets/img/pack_thumbnails/ainars-djatlevskis-gJQLVTyQfgQ-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import IrishCouplePack_srcset from "$lib/assets/img/pack_thumbnails/ainars-djatlevskis-gJQLVTyQfgQ-unsplash.jpg?w=500;900;1200;2000&webp&srcset";
     import EnglishNobilityManPack from "$lib/assets/img/pack_thumbnails/yaopey-yong-flmPTUCjkto-unsplash.jpg";
     // @ts-ignore
-    import EnglishNobilityManPack_srcset from "$lib/assets/img/pack_thumbnails/yaopey-yong-flmPTUCjkto-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import EnglishNobilityManPack_srcset from "$lib/assets/img/pack_thumbnails/yaopey-yong-flmPTUCjkto-unsplash.jpg?w=500;900;1200;2000&webp&srcset";
     import EnglishNobilityWomanPack from "$lib/assets/img/pack_thumbnails/neil-cartwright---kJ_2yCBPw-unsplash.jpg";
     // @ts-ignore
-    import EnglishNobilityWomanPack_srcset from "$lib/assets/img/pack_thumbnails/neil-cartwright---kJ_2yCBPw-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import EnglishNobilityWomanPack_srcset from "$lib/assets/img/pack_thumbnails/neil-cartwright---kJ_2yCBPw-unsplash.jpg?w=500;900;1200;2000&webp&srcset";
     import EnglishNobilityCouplePack from "$lib/assets/img/pack_thumbnails/52064110244_977f657bbb_o.jpg";
     // @ts-ignore
-    import EnglishNobilityCouplePack_srcset from "$lib/assets/img/pack_thumbnails/52064110244_977f657bbb_o.jpg?w=500;900;1200&webp&srcset";
+    import EnglishNobilityCouplePack_srcset from "$lib/assets/img/pack_thumbnails/52064110244_977f657bbb_o.jpg?w=500;900;1200;2000&webp&srcset";
     import MasterPack from "$lib/assets/img/pack_thumbnails/adam-kring-uqCMurxrzZc-unsplash.jpg";
     // @ts-ignore
-    import MasterPack_srcset from "$lib/assets/img/pack_thumbnails/adam-kring-uqCMurxrzZc-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import MasterPack_srcset from "$lib/assets/img/pack_thumbnails/adam-kring-uqCMurxrzZc-unsplash.jpg?w=500;900;1200;2000&webp&srcset";
     import MistressPack from "$lib/assets/img/pack_thumbnails/nick-fewings-xqlkl3AT7PU-unsplash.jpg";
     // @ts-ignore
-    import MistressPack_srcset from "$lib/assets/img/pack_thumbnails/nick-fewings-xqlkl3AT7PU-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import MistressPack_srcset from "$lib/assets/img/pack_thumbnails/nick-fewings-xqlkl3AT7PU-unsplash.jpg?w=500;900;1200;2000&webp&srcset";
     import MasterCouplePack from "$lib/assets/img/pack_thumbnails/bruno-martins-GkZvxVsHYWw-unsplash.jpg";
     // @ts-ignore
-    import MasterCouplePack_srcset from "$lib/assets/img/pack_thumbnails/bruno-martins-GkZvxVsHYWw-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import MasterCouplePack_srcset from "$lib/assets/img/pack_thumbnails/bruno-martins-GkZvxVsHYWw-unsplash.jpg?w=500;900;1200;2000&webp&srcset";
 
     import TestimonialPassport from "$lib/assets/img/testimonials/nicole-geri-gMJ3tFOLvnA-unsplash.jpg";
     // @ts-ignore
-    import TestimonialPassport_srcset from "$lib/assets/img/testimonials/nicole-geri-gMJ3tFOLvnA-unsplash.jpg?w=500;900;1200&webp&srcset";
+    import TestimonialPassport_srcset from "$lib/assets/img/testimonials/nicole-geri-gMJ3tFOLvnA-unsplash.jpg?w=500;900;1200;2000&webp&srcset";
     import TestimonialTinder from "$lib/assets/img/testimonials/IMG_0836.jpg";
     // @ts-ignore
-    import TestimonialTinder_srcset from "$lib/assets/img/testimonials/IMG_0836.jpg?w=500;900;1200&webp&srcset";
+    import TestimonialTinder_srcset from "$lib/assets/img/testimonials/IMG_0836.jpg?w=500;900;1200;2000&webp&srcset";
 </script>
 
 <Header>

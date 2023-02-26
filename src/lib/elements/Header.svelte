@@ -1,9 +1,11 @@
 <script lang="ts">
     import headerBckg from "$lib/assets/img/lisa-fecker-msTSnSajSiY-unsplash.jpg";
+    // @ts-ignore
+    import headerBckg_srcset from "$lib/assets/img/lisa-fecker-msTSnSajSiY-unsplash.jpg?w=500;900;1200;2000;3962&webp&srcset";
 </script>
 
 <header style={`background-image: url("${headerBckg}");`}>
-    <img src={headerBckg} alt="An Irish forest" />
+    <img src={headerBckg} srcset={headerBckg_srcset} alt="An Irish forest" />
     <div id="container">
         <slot name="navbar" />
         <section id="titles">
@@ -18,14 +20,15 @@
     @import "/src/styles.scss";
 
     header {
-        height: 100vh;
+        min-height: min(100svh, 100vh);
+        height: min(100svh, 100vh);
         width: 100%;
         color: white;
         @include font-heading-serif;
     }
 
     #container {
-        position: relative;
+        position: absolute;
         width: 100%;
         height: 100%;
         display: flex;

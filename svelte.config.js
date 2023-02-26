@@ -1,6 +1,7 @@
 import preprocess from "svelte-preprocess";
 import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/kit/vite";
+import { mdsvex } from "mdsvex";
 import { env } from "process";
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -9,6 +10,9 @@ const config = {
   // for more information about preprocessors
   preprocess: [
     vitePreprocess(),
+    mdsvex({
+      extensions: [".md", ".svx"]
+    }),
     preprocess({
       postcss: true,
     })
@@ -17,6 +21,7 @@ const config = {
     if (warning.code === "css-unused-selector") return;
     handler(warning);
   },
+  extensions: [".svelte", ".svx", ".md"],
   kit: {
     paths: {
       base: env.BASE_PATH ? env.BASE_PATH : "",

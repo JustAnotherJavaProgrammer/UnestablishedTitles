@@ -16,15 +16,36 @@
 </svelte:head>
 <!-- <SaleBanner href="/"/> -->
 <slot />
+<div class="filler" />
 <Footer />
 
-<style global lang="scss">
+<style lang="scss">
     @import "/src/styles.scss";
 
-    body {
+    .filler {
+        padding: 0;
+        margin: 0;
+        border: none;
+        flex: 1;
+    }
+
+    :global(html) {
+        scroll-behavior: smooth;
+        height: 100%;
+        // min-width: 100%;
+    }
+
+    :global(body) {
         @include font-text-serif;
         padding: 0;
         margin: 0;
         scroll-behavior: smooth;
+        height: 100%;
+        // min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: stretch;
+        gap: 0;
     }
 </style>
