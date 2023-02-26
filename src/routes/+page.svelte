@@ -178,5 +178,4 @@
         </Testimonial>
         <Testimonial>I have it framed on my bathroom wall. My Irish American heritage makes me proud to display the certificate on the wall of the bathroom.</Testimonial>
     </WideColumn>
-    <HotizontalDivider />
 </SiteColumn>

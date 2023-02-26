@@ -24,10 +24,10 @@ Please send your objection informally to the address mentioned above.
 
 In addition, you have the right to data transferability. You also have the right to complain to a supervisory authority about the processing. A list of the relevant authorities (in German) can be found at: [https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html](https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html).
 
-**Cookies**
+**Cookies**  
 This site does not use cookies.
 
-**Web Storage**
+**Web Storage**  
 Instead of cookies, we use a technology known as [Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API) as a means of locally storing data like your site preferences. This data is not sent via the network and is only processed locally on your device.
 
 **Hosting**  

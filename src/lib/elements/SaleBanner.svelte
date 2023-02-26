@@ -1,6 +1,6 @@
 <script lang="ts">
     import { building } from "$app/environment";
-    export let href: string;
+    export let href: string = "/sale";
 
     const currentYear = new Date().getFullYear();
 </script>

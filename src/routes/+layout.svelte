@@ -8,6 +8,7 @@
     import "@fontsource/almendra/400.css";
     import "@fontsource/roboto/400.css";
     import Footer from "$lib/elements/Footer.svelte";
+    import HotizontalDivider from "$lib/elements/HotizontalDivider.svelte";
     // import SaleBanner from "$lib/SaleBanner.svelte";
 </script>
 
@@ -17,6 +18,7 @@
 <!-- <SaleBanner href="/"/> -->
 <slot />
 <div class="filler" />
+<HotizontalDivider />
 <Footer />
 
 <style lang="scss">

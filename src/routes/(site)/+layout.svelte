@@ -14,7 +14,6 @@ import Navbar from "$lib/elements/Navbar.svelte";
             <slot />
         </div>
     </WideColumn>
-    <HotizontalDivider />
 </SiteColumn>
 
 <style lang="scss">

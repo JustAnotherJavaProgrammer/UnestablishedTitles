@@ -11,8 +11,8 @@
         </a>
         <div id="subpages">
             <a href="/">Home</a>
-            <a href="/">Get now</a>
-            <a href="/">Everyday sale</a>
+            <a href="/packs">Get now</a>
+            <a href="/sale">Everyday sale</a>
         </div>
     </div>
 </nav>

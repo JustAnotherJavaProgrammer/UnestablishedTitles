@@ -23,10 +23,10 @@ Bitte richte deinen Widerspruch formlos an oben genannte Adresse.
 
 Darüber hinaus hast du das Recht auf Datenübertragbarkeit. Du hast weiter das Recht, dich bei einer Aufsichtsbehörde über die Verarbeitung zu beschweren. Eine Liste der entsprechenden Behörden findest du unter: [https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html](https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html).
 
-**Cookies**
+**Cookies**  
 Diese Seite nutzt keine Cookies.
 
-**Web Storage**
+**Web Storage**  
 Statt Cookies nutzen wir eine Technologie namens [Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API), um lokal Daten wie z. B. deine Einstellungen zu speichern. Diese Daten werden nicht über das Netzwerk gesendet und ausschließlich lokal auf deinem Gerät verarbeitet.
 
 **Hosting**  
