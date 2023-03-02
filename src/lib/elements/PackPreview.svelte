@@ -67,6 +67,9 @@
         background-color: rgba(0, 0, 0, 0.1);
         z-index: 2;
         transition: background-color 0.5s ease-in-out;
+        box-sizing: border-box;
+        min-width: 100%;
+        min-height: 100%;
 
         & > * {
             z-index: 2;

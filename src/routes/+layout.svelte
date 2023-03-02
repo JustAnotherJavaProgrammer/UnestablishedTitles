@@ -1,4 +1,6 @@
 <script>
+    // export const prerender = true;
+
     // import "../styles.scss";
     import "../app.postcss";
     import "@fontsource/old-standard-tt/400.css";
@@ -12,9 +14,9 @@
     // import SaleBanner from "$lib/SaleBanner.svelte";
 </script>
 
-<svelte:head>
+<!-- <svelte:head>
     <title>Unestablished Titles</title>
-</svelte:head>
+</svelte:head> -->
 <!-- <SaleBanner href="/"/> -->
 <slot />
 <div class="filler" />

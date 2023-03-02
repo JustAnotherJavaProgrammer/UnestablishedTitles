@@ -1,3 +1,8 @@
+<script lang="ts">
+    import MetaInfo from "$lib/elements/MetaInfo.svelte";
+</script>
+
+<MetaInfo title="Imprint" description={"Legally required information about this site"}/>
 # Imprint
 
 ## Information in accordance with section 5 TMG

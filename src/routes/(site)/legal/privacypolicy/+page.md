@@ -1,3 +1,8 @@
+<script lang="ts">
+    import MetaInfo from "$lib/elements/MetaInfo.svelte";
+</script>
+
+<MetaInfo title="Privacy Policy" description={"The privacy policy for this site"}/>
 # Privacy Policy
 
 In the following we'd like to inform you about how we process your data.

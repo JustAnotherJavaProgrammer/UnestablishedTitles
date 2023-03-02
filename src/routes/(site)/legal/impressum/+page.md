@@ -1,3 +1,8 @@
+<script lang="ts">
+    import MetaInfo from "$lib/elements/MetaInfo.svelte";
+</script>
+
+<MetaInfo title="Impressum" description={"Imprint, in German\nImpressum auf Deutsch"}/>
 # Impressum
 
 ## Angaben gemäß § 5 TMG
