@@ -17,9 +17,9 @@
     import TestimonialPassport from "$lib/assets/img/testimonials/nicole-geri-gMJ3tFOLvnA-unsplash.jpg";
     // @ts-ignore
     import TestimonialPassport_srcset from "$lib/assets/img/testimonials/nicole-geri-gMJ3tFOLvnA-unsplash.jpg?w=500;900;1200;2000&webp&srcset";
-    import TestimonialTinder from "$lib/assets/img/testimonials/IMG_0836.jpg";
+    import TestimonialTinder from "$lib/assets/img/testimonials/tinder.jpg";
     // @ts-ignore
-    import TestimonialTinder_srcset from "$lib/assets/img/testimonials/IMG_0836.jpg?w=500;900;1200;2000&webp&srcset";
+    import TestimonialTinder_srcset from "$lib/assets/img/testimonials/tinder.jpg?w=500;900;1200;2000&webp&srcset";
     import MetaInfo from "$lib/elements/MetaInfo.svelte";
 </script>
 
