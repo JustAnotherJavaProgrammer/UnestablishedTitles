@@ -19,7 +19,7 @@
     {#if src != null}
     <div class="p-clone">
         <div class="img-container">
-            <img {src} {srcset} {alt} class:img-bottom={imgBottom}/>
+            <img {src} {srcset} {alt} class:img-bottom={imgBottom} loading="lazy"/>
         </div>
         <span class="text-wrapper twc" hidden aria-hidden="true" bind:this={textWrapperCopy}></span>
     </div>

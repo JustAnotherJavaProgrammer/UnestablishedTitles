@@ -8,7 +8,7 @@
 </script>
 
 <header style={`background-image: url("${headerBckg}");`}>
-    <img {src} {srcset} alt="An Irish forest" class:nonstandard={src !== headerBckg}/>
+    <img {src} {srcset} alt="An Irish forest" class:nonstandard={src !== headerBckg} loading="lazy"/>
     <div id="container">
         <slot name="navbar" />
         <section id="titles">

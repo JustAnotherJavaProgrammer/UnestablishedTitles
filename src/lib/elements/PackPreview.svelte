@@ -16,7 +16,7 @@
         </div>
     </section>
     <div class="img-container">
-        <img {src} {srcset} {alt} />
+        <img {src} {srcset} {alt} loading="lazy"/>
     </div>
 </a>
 

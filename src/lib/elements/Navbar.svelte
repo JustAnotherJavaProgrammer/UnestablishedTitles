@@ -8,7 +8,7 @@
 <nav class:black>
     <div id="container">
         <a id="rootlink" href="/">
-            <img id="icon" src={wreathIcon} alt="A laurel wreath with branches" />
+            <img id="icon" src={wreathIcon} alt="A laurel wreath with branches" loading="lazy"/>
             <span id="title">Unestablished Titles</span>
         </a>
         <div id="subpages">
