@@ -1,7 +1,7 @@
 <script lang="ts">
     import headerBckg from "$lib/assets/img/lisa-fecker-msTSnSajSiY-unsplash.jpg";
     // @ts-ignore
-    import headerBckg_srcset from "$lib/assets/img/lisa-fecker-msTSnSajSiY-unsplash.jpg?w=500;900;1200;2000;3962&webp&srcset";
+    import headerBckg_srcset from "$lib/assets/img/lisa-fecker-msTSnSajSiY-unsplash.jpg?w=50;100;200;300;400;500;900;1200;2000;3962&withoutEnlargement&webp;avif;jpg;png&srcset";
 
     export let src = headerBckg;
     export let srcset = headerBckg_srcset;

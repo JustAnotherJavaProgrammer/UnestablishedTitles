@@ -5,7 +5,7 @@
 
     import heroImage from "$lib/assets/img/jp-valery-mQTTDA_kY_8-unsplash.jpg";
     // @ts-ignore
-    import heroImage_srcset from "$lib/assets/img/jp-valery-mQTTDA_kY_8-unsplash.jpg?w=500;900;1200;2000;3962&webp&srcset";
+    import heroImage_srcset from "$lib/assets/img/jp-valery-mQTTDA_kY_8-unsplash.jpg?w=50;100;200;300;400;500;900;1200;2000&withoutEnlargement&webp;avif;jpg;png&srcset";
     import SiteColumn from "$lib/layout/SiteColumn.svelte";
     import Button from "$lib/elements/Button.svelte";
     import ParagraphSerif from "$lib/layout/ParagraphSerif.svelte";
