@@ -5,6 +5,7 @@ $white: #FFFFFF;
 $black: #000000;
 $off-white: #ebebeb;
 
+$breakpoint-xs: 479px;
 $breakpoint-md: 768px;
 $max-content-width: 1050px;
 
@@ -25,5 +26,6 @@ $max-content-width: 1050px;
 }
 
 @mixin font-text-fancy {
-    font-family: "Almendra", serif;
+    font-family: "UnifrakturCook", "Old Standard TT", cursive, serif;
+    font-weight: 700;
 }

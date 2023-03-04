@@ -24,7 +24,7 @@
         @include font-text-serif;
         padding: 0;
         margin: 0;
-        max-width: clamp(370px, 66.66%, 680px);
+        max-width: clamp(370px, 66.66vw, 680px);
         text-align: center;
     }
 

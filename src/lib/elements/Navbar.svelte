@@ -1,6 +1,8 @@
 <script lang="ts">
+    import { building } from "$app/environment";
     import wreathIcon from "$lib/assets/img/Greek_Roman_Laurel_wreath_with_branches_vector.svg";
     export let black: boolean = false;
+    const year = new Date().getFullYear();
 </script>
 
 <nav class:black>
@@ -12,7 +14,7 @@
         <div id="subpages">
             <a href="/">Home</a>
             <a href="/packs">Get now</a>
-            <a href="/sale">Everyday sale</a>
+            <a href="/sale">{building || true  ? "Everyday": year} sale</a>
         </div>
     </div>
 </nav>

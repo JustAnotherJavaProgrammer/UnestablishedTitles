@@ -11,7 +11,8 @@ const config = {
   preprocess: [
     vitePreprocess(),
     mdsvex({
-      extensions: [".md", ".svx"]
+      extensions: [".md", ".svx"],
+      layout: "./src/lib/layout/markdown.svelte",
     }),
     preprocess({
       postcss: true,

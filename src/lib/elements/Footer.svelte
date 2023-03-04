@@ -5,6 +5,13 @@
 
 <footer>
     <div class="content-column">
+        <FooterSection links={[
+            {text: "Home", href: "/"},
+            {text: "All Packs", href: "/packs"},
+            {text: "Generate certificates", href: "/generator"},
+            {text: "FAQ", href: "/faq"},
+            {text: "Credits", href: "/legal/credits"},
+        ]} ><svelte:fragment slot="title">Quick links</svelte:fragment></FooterSection>
         <FooterSection
             links={[
                 { text: "Imprint", href: "/legal/imprint" },
@@ -38,13 +45,14 @@
         max-width: $max-content-width;
         width: 100%;
         padding: 1rem;
+        gap: 1rem;
         box-sizing: border-box;
 
         @media screen and (min-width: $breakpoint-md) {
             flex-direction: row;
             align-items: flex-start;
-            justify-content: space-between;
-            gap: 1rem;
+            justify-content: space-around;
+            // gap: 1rem;
         }
     }
 </style>

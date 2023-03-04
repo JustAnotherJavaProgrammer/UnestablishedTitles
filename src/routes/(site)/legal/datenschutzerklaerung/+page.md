@@ -3,6 +3,7 @@
 </script>
 
 <MetaInfo title="Datenschutzerklärung" description={"Privacy policy, in German\nDatenschutzerklärung auf Deutsch"}/>
+
 # Datenschutzerklärung
 
 Im Folgenden möchten wir dich aufklären, wie deine Daten von uns verarbeitet werden.

@@ -23,14 +23,14 @@
     import MetaInfo from "$lib/elements/MetaInfo.svelte";
 </script>
 
-<MetaInfo title={undefined}/>
+<MetaInfo title={undefined} />
 
 <Header>
     <svelte:fragment slot="navbar"><Navbar /></svelte:fragment>
     <svelte:fragment slot="hero">You may wish to save the Irish woodlands</svelte:fragment>
     <svelte:fragment slot="title">Call Yourself a Lord Today</svelte:fragment>
-    <svelte:fragment slot="subtitle"
-        >(An absolutely useless gift
+    <svelte:fragment slot="subtitle">
+        (An absolutely useless gift
         {#if !building} in {new Date().getFullYear()}{/if})</svelte:fragment
     >
 </Header>

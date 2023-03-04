@@ -1,5 +1,5 @@
 <script>
-    // export const prerender = true;
+    export const prerender = true;
 
     // import "../styles.scss";
     import "../app.postcss";
@@ -7,7 +7,7 @@
     import "@fontsource/bebas-neue/400.css";
     import "@fontsource/crimson-text/400.css";
     import "@fontsource/crimson-text/600.css";
-    import "@fontsource/almendra/400.css";
+    import "@fontsource/unifrakturcook";
     import "@fontsource/roboto/400.css";
     import Footer from "$lib/elements/Footer.svelte";
     import HotizontalDivider from "$lib/elements/HotizontalDivider.svelte";

@@ -2,10 +2,13 @@
     import headerBckg from "$lib/assets/img/lisa-fecker-msTSnSajSiY-unsplash.jpg";
     // @ts-ignore
     import headerBckg_srcset from "$lib/assets/img/lisa-fecker-msTSnSajSiY-unsplash.jpg?w=500;900;1200;2000;3962&webp&srcset";
+
+    export let src = headerBckg;
+    export let srcset = headerBckg_srcset;
 </script>
 
 <header style={`background-image: url("${headerBckg}");`}>
-    <img src={headerBckg} srcset={headerBckg_srcset} alt="An Irish forest" />
+    <img {src} {srcset} alt="An Irish forest" class:nonstandard={src !== headerBckg}/>
     <div id="container">
         <slot name="navbar" />
         <section id="titles">
@@ -67,5 +70,9 @@
         width: 100%;
         object-fit: cover;
         object-position: bottom;
+    }
+
+    img.nonstandard {
+        object-position: center;
     }
 </style>

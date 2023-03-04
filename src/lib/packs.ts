@@ -26,6 +26,10 @@ import MasterCouplePack from "$lib/assets/img/pack_thumbnails/bruno-martins-GkZv
 // @ts-ignore
 import MasterCouplePack_srcset from "$lib/assets/img/pack_thumbnails/bruno-martins-GkZvxVsHYWw-unsplash.jpg?w=500;900;1200;2000&webp&srcset";
 
+import CustomCouplePack from "$lib/assets/img/pack_thumbnails/jay-gomez-9Yi5rOiVCPU-unsplash.jpg";
+// @ts-ignore
+import CustomCouplePack_srcset from "$lib/assets/img/pack_thumbnails/jay-gomez-9Yi5rOiVCPU-unsplash.jpg?w=500;900;1200;2000&webp&srcset";
+
 export type PackInfo = {
     name: string;
     previewImage: {
@@ -109,6 +113,15 @@ const packInfo: ReadonlyArray<PackInfo> = [
             srcset: MasterCouplePack_srcset,
             alt: "Kynance Mews, London, UK"
         }
+    },
+    {
+        name: "Couple Title Pack (Custom)",
+        previewImage: {
+            src: CustomCouplePack,
+            srcset: CustomCouplePack_srcset,
+            alt: "Carsington Water, United Kingdom"
+        },
+        tagline: "Every couple is special, so why not combine the titles of your choice to express how you feel for each other?"
     }
 ];
 export default packInfo;

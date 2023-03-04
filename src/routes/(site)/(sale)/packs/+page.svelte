@@ -39,14 +39,23 @@
         grid-auto-rows: 1fr;
         grid-auto-flow: row;
         gap: 1rem;
+        @media screen and (max-width: ($breakpoint-xs - 1px)) {
+            grid-template-columns: 1fr;
+        }
         @media screen and (min-width: $breakpoint-md) {
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
 
-    @media screen and (max-width: ($breakpoint-md - 1px)) {
-        :global(section.pack-grid > :nth-child(3n)) {
+    @media screen and (min-width: $breakpoint-xs) and (max-width: ($breakpoint-md - 1px)) {
+        :global(section.pack-grid > :nth-child(3n), section.pack-grid > :last-child) {
             grid-column: span 2;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+        :global(section.pack-grid > :last-child) {
+            grid-column: span 3;
         }
     }
 </style>
