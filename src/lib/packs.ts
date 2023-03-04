@@ -38,6 +38,7 @@ export type PackInfo = {
         alt: string;
     };
     tagline?: string;
+    generatorHref: string;
 };
 
 const packInfo: ReadonlyArray<PackInfo> = [
@@ -47,7 +48,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             src: IrishMenPack,
             srcset: IrishMenPack_srcset,
             alt: "Giant's Causeway"
-        }
+        },
+        generatorHref: "/generator?title=lord"
     },
     {
         name: "Ladyship Pack",
@@ -55,7 +57,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             src: IrishWomenPack,
             srcset: IrishWomenPack_srcset,
             alt: "Castle On The Hill"
-        }
+        },
+        generatorHref: "/generator?title=lady"
     },
     {
         name: "Couple Title Pack (Lord/Lady)",
@@ -63,7 +66,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             src: IrishCouplePack,
             srcset: IrishCouplePack_srcset,
             alt: "Donegal, Ireland"
-        }
+        },
+        generatorHref: "/generator?title=irishcouple"
     },
     {
         name: "Sir Title Pack",
@@ -71,7 +75,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             src: EnglishNobilityManPack,
             srcset: EnglishNobilityManPack_srcset,
             alt: "Westminister Palace in the evening"
-        }
+        },
+        generatorHref: "/generator?title=sir"
     },
     {
         name: "Dame Title Pack",
@@ -79,7 +84,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             src: EnglishNobilityWomanPack,
             srcset: EnglishNobilityWomanPack_srcset,
             alt: "Buckingham Palace"
-        }
+        },
+        generatorHref: "/generator?title=dame"
     },
     {
         name: "Couple Title Pack (Sir/Dame)",
@@ -88,6 +94,7 @@ const packInfo: ReadonlyArray<PackInfo> = [
             srcset: EnglishNobilityCouplePack_srcset,
             alt: "The Queen's Speech 2022"
         },
+        generatorHref: "/generator?title=englishcouple",
         tagline: "Photo: Copyright House of Lords 2022 / Photography by Annabel Moeller"
     },
     {
@@ -96,7 +103,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             src: MasterPack,
             srcset: MasterPack_srcset,
             alt: "A plantation house in South Carolina"
-        }
+        },
+        generatorHref: "/generator?title=master"
     },
     {
         name: "Mistress Pack",
@@ -104,7 +112,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             src: MistressPack,
             srcset: MistressPack_srcset,
             alt: "Crichel House, Dorset, from across the lake, in the wonderful Dorset countryside."
-        }
+        },
+        generatorHref: "/generator?title=mistress"
     },
     {
         name: "Couple Title Pack (Master/Mistress)",
@@ -112,7 +121,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             src: MasterCouplePack,
             srcset: MasterCouplePack_srcset,
             alt: "Kynance Mews, London, UK"
-        }
+        },
+        generatorHref: "/generator?title=mmcouple"
     },
     {
         name: "Couple Title Pack (Custom)",
@@ -121,6 +131,7 @@ const packInfo: ReadonlyArray<PackInfo> = [
             srcset: CustomCouplePack_srcset,
             alt: "Carsington Water, United Kingdom"
         },
+        generatorHref: "/generator?title=couple",
         tagline: "Every couple is special, so why not combine the titles of your choice to express how you feel for each other?"
     }
 ];

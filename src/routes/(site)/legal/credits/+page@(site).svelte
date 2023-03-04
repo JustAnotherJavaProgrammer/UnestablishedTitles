@@ -104,7 +104,7 @@
     <ParagraphSerif>
         <svelte:fragment slot="title">Coolors</svelte:fragment>
         I have protanomaly, a form of color blindness. That's why I used <a href="https://coolors.co/">Coolors</a> by <a href="https://fabrizio.io/">Fabrizio Bianchi</a>
-        to find a color palette that is also aesthetically pleasing to regular people.
+        to find a color palette that is also aesthetically pleasing to people with regular color vision.
     </ParagraphSerif>
 </SiteColumn>
 

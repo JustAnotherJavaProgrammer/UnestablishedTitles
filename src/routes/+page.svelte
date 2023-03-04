@@ -80,11 +80,11 @@
     <WideColumn>
         {#each packs as pack}
             {#if pack.tagline === undefined}
-                <PackPreview src={pack.previewImage.src} srcset={pack.previewImage.srcset} alt={pack.previewImage.alt}>
+                <PackPreview src={pack.previewImage.src} srcset={pack.previewImage.srcset} alt={pack.previewImage.alt} href={pack.generatorHref}>
                     <svelte:fragment slot="name">{pack.name}</svelte:fragment>
                 </PackPreview>
             {:else}
-                <PackPreview src={pack.previewImage.src} srcset={pack.previewImage.srcset} alt={pack.previewImage.alt}>
+                <PackPreview src={pack.previewImage.src} srcset={pack.previewImage.srcset} alt={pack.previewImage.alt} href={pack.generatorHref}>
                     <svelte:fragment slot="name">{pack.name}</svelte:fragment>
                     <svelte:fragment slot="tagline">{pack.tagline}</svelte:fragment>
                 </PackPreview>
