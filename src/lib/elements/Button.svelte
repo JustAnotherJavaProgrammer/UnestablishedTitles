@@ -38,6 +38,7 @@
         border: 0.2rem solid;
         text-decoration: none;
         transition: background-color 0.1s, color 0.1s;
+        line-height: normal;
 
         &.red {
             border-color: $red;

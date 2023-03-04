@@ -37,39 +37,30 @@
 <SiteColumn>
     <ParagraphSerif>
         <svelte:fragment slot="title">Lordship & Ladyship Title Packs</svelte:fragment>
-        Purchase a personal Lordship or Ladyship Title Pack without dedicated land in Ireland.
-        <br />
-        These Title Packs are based on a historic Scottish land ownership custom, where Landowners have been long referred to as "Lairds", the Scottish term for "Lord", with the
-        female equivalent being "Lady".
-        <br />
-        <Italics>Later on, many Scots immigrated to Ireland, bringing with them their traditions and customs.</Italics>
-        <br />
-        Every Lordship or Ladyship title pack contributes to the amount of time spent thinking about the protection and preservation of Irish woodlands. As the intention is for the
-        land to be reforested, we ask that all interested parties bear this in mind.
+        <p>Purchase a personal Lordship or Ladyship Title Pack without dedicated land in Ireland.</p>
+        <p>These Title Packs are based on a historic Scottish land ownership custom, where Landowners have been long referred to as "Lairds", the Scottish term for "Lord", with the
+        female equivalent being "Lady".</p>
+        <p><Italics>Later on, many Scots immigrated to Ireland, bringing with them their traditions and customs.</Italics></p>
+        <p>Every Lordship or Ladyship title pack contributes to the amount of time spent thinking about the protection and preservation of Irish woodlands. As the intention is for the
+        land to be reforested, we ask that all interested parties bear this in mind.</p>
     </ParagraphSerif>
     <ParagraphSerif>
         <svelte:fragment slot="title">Sir & Dame Title Packs</svelte:fragment>
-        Get called "Sir" or "Dame" with this Title Pack without the hassle of obtaining a knighthood.
-        <br />
-        These Title Packs are based on an English custom, where people with a higher social status have been long addressed as "Sir", with the female equivalent of the title of "Sir"
-        being "Dame".
-        <br />
-        <Italics>*This pack includes a certificate of your preferred form of address. You may choose to title yourself with the title of Sir or Dame.</Italics>
-        <br />
-        Every Sir or Dame title pack contributes to the confusion about the legality of this scheme. As the intention is for this uncertainty to not be resolved, we ask that all
-        interested parties keep this in mind.
+        <p>Get called "Sir" or "Dame" with this Title Pack without the hassle of obtaining a knighthood.</p>
+        <p>These Title Packs are based on an English custom, where people with a higher social status have been long addressed as "Sir", with the female equivalent of the title of "Sir"
+        being "Dame".</p>
+        <p><Italics>*This pack includes a certificate of your preferred form of address. You may choose to title yourself with the title of Sir or Dame.</Italics></p>
+        <p>Every Sir or Dame title pack contributes to the confusion about the legality of this scheme. As the intention is for this uncertainty to not be resolved, we ask that all
+        interested parties keep this in mind.</p>
     </ParagraphSerif>
     <ParagraphSerif>
         <svelte:fragment slot="title">Master & Mistress Title Packs</svelte:fragment>
-        Purchase a personal Master or Mistress Title Pack even without English citizenship.
-        <br />
-        These Title Packs are based on a historic English land custom of respect, where respectable men referred to each other as "Masters", the forerunner of modern "Mister", with
-        the female equivalent being "Mistress".
-        <br />
-        <Italics>We do not quite understand why this is the most popular of our Title Packs, but we will gladly take your money.</Italics>
-        <br />
-        Every Master or Mistress title pack should contribute to the respectful treatment of human beings. Since the intention is for civility to be upheld, we ask that all interested
-        parties bear this in mind.
+        <p>Purchase a personal Master or Mistress Title Pack even without English citizenship.</p>
+        <p>These Title Packs are based on a historic English land custom of respect, where respectable men referred to each other as "Masters", the forerunner of modern "Mister", with
+        the female equivalent being "Mistress".</p>
+        <p><Italics>We do not quite understand why this is the most popular of our Title Packs, but we will gladly take your money.</Italics></p>
+        <p>Every Master or Mistress title pack should contribute to the respectful treatment of human beings. Since the intention is for civility to be upheld, we ask that all interested
+        parties bear this in mind.</p>
     </ParagraphSerif>
     <ParagraphSerif>
         <svelte:fragment slot="title">Available Title Packs</svelte:fragment>
@@ -94,10 +85,9 @@
 
     <ParagraphSerif>
         <svelte:fragment slot="title">Each pack contains:</svelte:fragment>
-        One automatically generated certificate of your preferred form of address, in the form of a printable PDF file. Nothing less, nothing more.
-        <br />
-        The intention of these packs is to provide a fun, novelty product for those who want to get something a little different for themselves, friends or family, all while simultaneously
-        not feeling the need to pretend to protect woodlands in Ireland.
+        <p>One automatically generated certificate of your preferred form of address, in the form of a printable PDF file. Nothing less, nothing more.</p>
+        <p>The intention of these packs is to provide a fun, novelty product for those who want to get something a little different for themselves, friends or family, all while simultaneously
+        not feeling the need to pretend to protect woodlands in Ireland.</p>
     </ParagraphSerif>
 
     <GapReducerSmall />
@@ -106,10 +96,10 @@
 
     <ParagraphSerif>
         <svelte:fragment slot="title">Testimonials</svelte:fragment>
-        <Italics>*Please note that images below may be illustrative only and text may be completely fictitious</Italics>
+        <p><Italics>*Please note that images below may be illustrative only and text may be completely fictitious</Italics></p>
     </ParagraphSerif>
     <GapReducer />
-    <!-- TODO: Testimonials -->
+    <!-- Testimonials -->
     <WideColumn>
         <Testimonial>
             Decided to surprise my husband, whilst out for the first time since The Event in order to celebrate our 4th wedding anniversary, with a Lordship. Decided to treat

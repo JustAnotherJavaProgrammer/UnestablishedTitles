@@ -50,4 +50,9 @@
         justify-content: stretch;
         gap: 0;
     }
+
+    :global(p) {
+        margin: 0;
+        padding: 0;
+    }
 </style>

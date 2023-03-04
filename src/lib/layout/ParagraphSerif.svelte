@@ -1,20 +1,14 @@
 <script lang="ts">
-    import { onMount } from "svelte";
+    // import { onMount } from "svelte";
     import HeadingSerif from "./HeadingSerif.svelte";
     let content: HTMLParagraphElement;
-
-    onMount(() => {
-        for (const lineBreak of [...content.getElementsByTagName("br")]) {
-            lineBreak.after(document.createElement("br"));
-        }
-    });
 </script>
 
 <section>
     <HeadingSerif><slot name="title">This is the title of your paragraph</slot></HeadingSerif>
-    <p bind:this={content}>
+    <div bind:this={content}>
         <slot>Serif text can be placed here. This is a very unique opportunity to create your own content.</slot>
-    </p>
+    </div>
 </section>
 
 <style lang="scss">
@@ -28,9 +22,14 @@
         text-align: center;
     }
 
-    p {
+    div {
         line-height: 1.75em;
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.7em;
     }
 </style>

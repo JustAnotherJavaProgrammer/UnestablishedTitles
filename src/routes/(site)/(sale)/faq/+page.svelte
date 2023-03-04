@@ -13,13 +13,13 @@
 <SiteColumn>
     <ParagraphSerif>
         <svelte:fragment slot="title">Is this a scam?</svelte:fragment>
-        No. How can it be a scam if it's free?
+        <p>No. How can it be a scam if it's free?</p>
     </ParagraphSerif>
 
     <ParagraphSerif>
         <svelte:fragment slot="title">Why can't I generate any certificates?</svelte:fragment>
-        For one, that feature isn't available yet.<br />
-        But also, you need to have JavaScript enabled in your browser. This is because the certificates are generated on your device, not on a server.
-        JavaScript is the technology that makes this possible.
+        <p>For one, that feature isn't available yet.</p>
+        <p>But also, you need to have JavaScript enabled in your browser. This is because the certificates are generated on your device, not on a server.
+        JavaScript is the technology that makes this possible.</p>
     </ParagraphSerif>
 </SiteColumn>

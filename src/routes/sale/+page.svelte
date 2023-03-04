@@ -25,8 +25,8 @@
 <SiteColumn>
     <ParagraphSerif>
         <svelte:fragment slot="title">How does this work?</svelte:fragment>
-        Simply click on the button below to choose your preferred form of address (title pack) and generate your free certificate.<br />
-        You can repeat this process as often as you wish.<br />
+        <p>Simply click on the button below to choose your preferred form of address (title pack) and generate your free certificate.</p>
+        <p>You can repeat this process as often as you wish.</p>
         <Button type="a" href="/packs" color="red">Choose a title pack</Button>
     </ParagraphSerif>
 </SiteColumn>

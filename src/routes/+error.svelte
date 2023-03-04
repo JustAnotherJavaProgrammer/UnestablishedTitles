@@ -12,7 +12,7 @@
 <SiteColumn nogap>
     <ParagraphSerif>
         <svelte:fragment slot="title">{$page.status} &ndash {$page.error?.message ?? "That's an error"}</svelte:fragment>
-        This is not the page you are looking for.<br />
+        <p>This is not the page you are looking for.</p>
         <Button type="a" href="/" color="green">Return to the homepage</Button>
     </ParagraphSerif>
 </SiteColumn>
