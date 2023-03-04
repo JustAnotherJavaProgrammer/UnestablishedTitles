@@ -25,7 +25,7 @@ const config = {
   extensions: [".svelte", ".svx", ".md"],
   kit: {
     paths: {
-      base: env.BASE_PATH ? env.BASE_PATH : "",
+      base: /**env.BASE_PATH ? env.BASE_PATH : **/ "",
     },
     adapter: adapter({
       pages: env.BUILD_OUT_DIR ? env.BUILD_OUT_DIR : "build",
@@ -33,6 +33,9 @@ const config = {
       fallback: "404.html",
       precompress: env.PRECOMPRESS === "true",
     }),
+    prerender: {
+      origin: env.BASE_PATH ? env.BASE_PATH : undefined,
+    },
   },
 };
 

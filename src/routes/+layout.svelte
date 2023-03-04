@@ -1,6 +1,4 @@
 <script>
-    export const prerender = true;
-
     // import "../styles.scss";
     import "../app.postcss";
     import "@fontsource/old-standard-tt/400.css";

@@ -2,10 +2,7 @@
     import HotizontalDivider from "$lib/elements/HotizontalDivider.svelte";
     import MetaInfo from "$lib/elements/MetaInfo.svelte";
     import PackPreview from "$lib/elements/PackPreview.svelte";
-    import GapReducer from "$lib/layout/GapReducer.svelte";
-    import GapReducerSmall from "$lib/layout/GapReducerSmall.svelte";
     import HeadingSerif from "$lib/layout/HeadingSerif.svelte";
-    import SiteColumn from "$lib/layout/SiteColumn.svelte";
     import WideColumn from "$lib/layout/WideColumn.svelte";
 
     import packs from "$lib/packs";
