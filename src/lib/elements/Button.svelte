@@ -69,4 +69,8 @@
         }
         
     }
+
+    :global(a) {
+        color: $blue;
+    }
 </style>

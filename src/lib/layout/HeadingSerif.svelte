@@ -12,6 +12,10 @@
         max-width: clamp(370px, 66.66vw, 680px)
     }
 
+    :global(h1) {
+        font-weight: 700;
+    }
+
     h1.noExtraSpace {
         padding: 0;
         margin: 0;
