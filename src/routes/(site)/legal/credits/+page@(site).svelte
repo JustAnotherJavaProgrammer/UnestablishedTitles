@@ -88,6 +88,9 @@
             <li>
                 <a href="https://unsplash.com/photos/gMJ3tFOLvnA">Nicole Geri</a>
             </li>
+            <li>
+                <a href="https://unsplash.com/photos/3gifzboyZk0">Kiwihug</a>
+            </li>
         </ul>
         <br />
         <p>I also used some media from <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>:</p>

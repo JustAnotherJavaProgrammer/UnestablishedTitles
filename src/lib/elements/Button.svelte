@@ -14,7 +14,7 @@
 {:else if type == "reset"}
     <input type="reset" class="button {color}" />
 {:else}
-    <button class="button {color}" type="button">
+    <button class="button {color}" type="button" on:click>
         <slot />
     </button>
 {/if}
@@ -28,7 +28,7 @@
 
     label {
         display: inline-block;
-        cursor: pointer;
+        // cursor: pointer;
     }
 
     label, a, button, input {
@@ -39,6 +39,7 @@
         text-decoration: none;
         transition: background-color 0.1s, color 0.1s;
         line-height: normal;
+        cursor: pointer;
 
         &.red {
             border-color: $red;

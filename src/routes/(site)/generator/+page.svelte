@@ -1,6 +1,14 @@
-<script>
-    import MetaInfo from "$lib/elements/MetaInfo.svelte";
+<script lang="ts">
+    import Button from "$lib/elements/Button.svelte";
+import MetaInfo from "$lib/elements/MetaInfo.svelte";
+    import generateCertificate from "$lib/generator/generate";
     import HeadingSerif from "$lib/layout/HeadingSerif.svelte";
+
+    async function onGenerate(e: MouseEvent) {
+        console.log("Generate");
+        window.open(await generateCertificate());
+        console.log("Done");
+    }
 </script>
 
 <MetaInfo title="Generator" description="Generate your certificate now. It's completely free!" />
@@ -12,6 +20,7 @@
     </div>
 </noscript>
 Coming soon...
+<Button type="button" color="blue" on:click={onGenerate}>Generate</Button>
 
 <style lang="scss">
     @import "/src/styles.scss";
