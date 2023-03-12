@@ -19,6 +19,17 @@ const topLeft = (title: string) => `(hereafter referred to as ${title}), has, by
     `Unestablished Titles agrees to dedicate THE CERTIFICATE in the name of the Lord to the ${title}, ` +
     `in order for them to share their favourite form of address with the wider world,` +
     `altogether or as part of a larger set of certificates.`;
+const topRightFirstLine = "Now this deed witnesseth as follows";
+const topRight = (title: string) => `Whereas, THE CERTIFICATE has been generated free of charge and ` +
+    `made available to the ${title} in relation to a scheme of stupid novelty gifts, Unestablished Titles, ` +
+    `in CONSIDERATION of all sums neither due nor paid to us by the ${title}, of which we don't acknowledge receipt of, ` +
+    `has bequeathed a dedication in favour of the ${title}, their assignees and their successors all and whole, ` +
+    `but without the rights thereto over the larger subjects and its successors in title of the larger subjects and ` +
+    `all others authorised by it, which remain with Unestablished Titles. ` +
+    `The ${title} hereby covenants with Unestablished Titles that the Dedication agreed upon in this Proclamation is for ` +
+    `the ${title} and their successors in title only and that they and any of their successors shall not sell the ` +
+    `dedication of THE CERTIFICATE or THE CERTIFICATE itself, more specifically not in such a way that it could be ` +
+    `registered or owned in separate titles or in separate ownerships.`;
 
 
 let oldPaper_arrBuff: ArrayBuffer;
