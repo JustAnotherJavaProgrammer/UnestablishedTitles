@@ -6,7 +6,7 @@ import oldPaper from "$lib/assets/img/certificate/kiwihug-3gifzboyZk0-unsplash.j
 
 const title = "Proclamation";
 const firstLine = "Whereas,"
-const secondLine = (title: string, name: any) => `${title} ${name}`;
+const secondLine = (title: string, name: string) => `${title} ${name}`;
 const topLeft = (title: string) => `(hereafter referred to as ${title}), has, by way of notice, ` +
     `this seventh day of october in the year two thousand and twenty two, in the first year of the Reign of ` +
     `Our Sovereign King Charles the Third, by the Grace of God, of the United Kingdom of Great Britain and Northern Ireland ` +
@@ -30,21 +30,38 @@ const topRight = (title: string) => `Whereas, THE CERTIFICATE has been generated
     `the ${title} and their successors in title only and that they and any of their successors shall not sell the ` +
     `dedication of THE CERTIFICATE or THE CERTIFICATE itself, more specifically not in such a way that it could be ` +
     `registered or owned in separate titles or in separate ownerships.`;
+const bottomFirstLine = "Know ye therefore that";
+const bottom = (title: string, name: string) => `${name}, by the virtue of the ownership of this certificate, ` +
+    `by way of pestering everyone in their vicinity, upon the effect and the receipt of this proclamation, ` +
+    `in particular regarding the certificate created by Unestablished Titles, ` +
+    `may henceforth and in perpetuity request to be known by the style and title of ${title} and shall hereafter, ` +
+    `to all and sundry, be calling themselves ${title} ${name}.`;
 
 
 let oldPaper_arrBuff: ArrayBuffer;
+let fancyFont_arrBuff: ArrayBuffer;
 
 export default async function generateCertificate() {
     const pdfDoc = await PDFDocument.create();
     pdfDoc.registerFontkit(fontkit);
     const page = pdfDoc.addPage([PageSizes.A4[1], PageSizes.A4[0]]); // A4 landscape
-    if (oldPaper_arrBuff === undefined)
-        oldPaper_arrBuff = await (await fetch(oldPaper)).arrayBuffer();
-    const img_oldPaper = await pdfDoc.embedJpg(oldPaper_arrBuff);
-    fullPageImage(page, img_oldPaper);
+    // Set background
+    {
+        if (oldPaper_arrBuff === undefined)
+            oldPaper_arrBuff = await (await fetch(oldPaper)).arrayBuffer();
+        const img_oldPaper = await pdfDoc.embedJpg(oldPaper_arrBuff);
+        fullPageImage(page, img_oldPaper);
+    }
+    // Set fancy font
+    // {
+    if (fancyFont_arrBuff === undefined)
+        fancyFont_arrBuff = await (await fetch("/pdfFonts/UnifrakturCook-Bold.ttf")).arrayBuffer();
+    const font = await pdfDoc.embedFont(fancyFont_arrBuff, { customName: "UnifrakturCook" });
+    // }
     return pdfDoc.saveAsBase64({ dataUri: true });
 }
 
+// Derived from https://gist.github.com/JustAnotherJavaProgrammer/daf36211f1f53fb4ce723becb94b361f
 function fullPageImage(page: PDFPage, image: PDFImage) {
     let scale = page.getHeight() / image.height;
     if (image.width * scale < page.getWidth()) {
