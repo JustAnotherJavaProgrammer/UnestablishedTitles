@@ -1,8 +1,9 @@
 import { PDFDocument } from "pdf-lib";
-import { PageSizes, PDFImage, PDFPage } from "pdf-lib/cjs/api";
+import { PageSizes, PDFImage, PDFPage, rectangle } from "pdf-lib/cjs/api";
 import fontkit from "@pdf-lib/fontkit";
 // @ts-ignore
 import oldPaper from "$lib/assets/img/certificate/kiwihug-3gifzboyZk0-unsplash.jpg?rotate=270";
+import { Alignment, fitTextWithinRect, type Rectangle } from "./textRendering";
 
 const title = "Proclamation";
 const firstLine = "Whereas,"
@@ -57,6 +58,8 @@ export default async function generateCertificate() {
     if (fancyFont_arrBuff === undefined)
         fancyFont_arrBuff = await (await fetch("/pdfFonts/UnifrakturCook-Bold.ttf")).arrayBuffer();
     const font = await pdfDoc.embedFont(fancyFont_arrBuff, { customName: "UnifrakturCook" });
+
+    fitTextWithinRect(page, font, percentageRect({x: 5, y: 5, width: 90, height: 10}), "Proclamation", true, Alignment.CENTER);
     // }
     return pdfDoc.saveAsBase64({ dataUri: true });
 }
@@ -73,4 +76,11 @@ function fullPageImage(page: PDFPage, image: PDFImage) {
         width: image.width * scale,
         height: image.height * scale
     });
+}
+
+function percentageRect(page: PDFPage, rect: Rectangle): Rectangle {
+    const pageWidth = page.getWidth();
+    const pageHeight = page.getHeight();
+    const rectHeight = pageHeight * rect.height * 100;
+    return { x: pageWidth * rect.x * 100, y: pageHeight - (pageHeight * rect.y * 100) - rectHeight, width: pageWidth * rect.width * 100, height: rectHeight };
 }
