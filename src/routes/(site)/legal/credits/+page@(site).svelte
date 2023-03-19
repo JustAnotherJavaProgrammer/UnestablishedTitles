@@ -2,6 +2,7 @@
     import HotizontalDivider from "$lib/elements/HotizontalDivider.svelte";
     import MetaInfo from "$lib/elements/MetaInfo.svelte";
     import HeadingSerif from "$lib/layout/HeadingSerif.svelte";
+    import Italics from "$lib/layout/Italics.svelte";
     import ParagraphSerif from "$lib/layout/ParagraphSerif.svelte";
     import SiteColumn from "$lib/layout/SiteColumn.svelte";
 </script>
@@ -51,6 +52,15 @@
                 <a href="https://fonts.google.com/specimen/UnifrakturCook">UnifrakturCook</a> by j. 'mach' wust
             </li>
         </ul>
+    </ParagraphSerif>
+
+    <ParagraphSerif>
+        <svelte:fragment slot="title">PDF-LIB Contributors</svelte:fragment>
+        <p>
+            PDFs on this site are generated with <a href="https://pdf-lib.js.org/">pdf-lib</a>.<br />
+            Since that's the main feature of this site, I'd like to thank the people behind this project. It would have been a lot harder without you.<br />
+            You can find a list of all contributors on <a href="https://github.com/Hopding/pdf-lib/graphs/contributors">GitHub</a>.
+        </p>
     </ParagraphSerif>
 
     <ParagraphSerif>
@@ -107,9 +117,19 @@
                 <a href="https://commons.wikimedia.org/w/index.php?curid=68009697">Link</a>
             </li>
             <li>
+                Coat of arms of Germany.svg by <a href="https://www.wikidata.org/wiki/Q1730157">Karl-Tobias Schwab</a> - Own work based on: Bekanntmachung über die farbige
+                Darstellung des Bundeswappens. Vom 4. Juli 1952. In: Bundesanzeiger Nr. 169 vom 02. September 1952., Public Domain,
+                <a href="https://commons.wikimedia.org/w/index.php?curid=640691">Link</a><br />
+                (The silhouette in the coat of arms on the certificate is based on that)
+            </li>
+            <li>
                 Four-leaf clover.svg by <a href="https://openclipart.org/artist/Firkin">Firkin - Openclipart</a>,
                 <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>,
                 <a href="https://commons.wikimedia.org/w/index.php?curid=88923308">Link</a>
+            </li>
+            <li>
+                Invisible Pink Unicorn.png by <a href="https://en.wikipedia.org/wiki/User:Bingo_pajama_bee">Bingo pajama bee</a> - Own work, Public Domain,
+                <a href="https://commons.wikimedia.org/w/index.php?curid=71103">Link</a>
             </li>
         </ul>
         <p>And a photo from the Queens speech in 2022: <a href="https://flic.kr/p/2njJb6b">Copyright House of Lords 2022 / Photography by Annabel Moeller</a></p>
