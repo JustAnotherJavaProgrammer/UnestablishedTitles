@@ -15,7 +15,7 @@ export function wrap(str: Readonly<string>, fm: Readonly<FontMetrics>, maxWidth:
 const whitespaceOrHyphen = /\s|-/g;
 
 function wrapLineInto(line: Readonly<string>, list: string[], fm: Readonly<FontMetrics>, maxWidth: Readonly<number>): void {
-    if(line.trim().length === 0) {
+    if (line.trim().length === 0) {
         list.push("");
         return;
     }
@@ -43,6 +43,9 @@ function wrapLineInto(line: Readonly<string>, list: string[], fm: Readonly<FontM
         }
         prev = match.index;
     }
+    const lastPart = line.substring(start).trim();
+    if (lastPart.length > 0)
+        list.push(line.substring(start).trim());
 }
 
 export function splitIntoLines(str: string): string[] {

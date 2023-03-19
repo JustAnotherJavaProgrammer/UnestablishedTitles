@@ -17,17 +17,23 @@
 <SiteColumn>
     <ParagraphSerif>
         <svelte:fragment slot="title">Svelte and SvelteKit Contributors</svelte:fragment>
-        <p>This page is built with <a href="https://svelte.dev">Svelte</a> and <a href="https://kit.svelte.dev">SvelteKit</a>. You can find a list of all contributors on
-        <a href="https://github.com/sveltejs/svelte/graphs/contributors">GitHub (Svelte)</a>
-        <a href="https://github.com/sveltejs/kit/graphs/contributors">(SvelteKit)</a>.</p>
-        <p>I also used <a href="https://mdsvex.pngwn.io/">mdsvex</a>, <a href="https://www.npmjs.com/package/vite-imagetools">vite-imagetools</a>,
-        <a href="https://sass-lang.com/">Sass</a> and <a href="https://postcss.org/">PostCSS</a>.</p>
+        <p>
+            This page is built with <a href="https://svelte.dev">Svelte</a> and <a href="https://kit.svelte.dev">SvelteKit</a>. You can find a list of all contributors on
+            <a href="https://github.com/sveltejs/svelte/graphs/contributors">GitHub (Svelte)</a>
+            <a href="https://github.com/sveltejs/kit/graphs/contributors">(SvelteKit)</a>.
+        </p>
+        <p>
+            I also used <a href="https://mdsvex.pngwn.io/">mdsvex</a>, <a href="https://www.npmjs.com/package/vite-imagetools">vite-imagetools</a>,
+            <a href="https://sass-lang.com/">Sass</a> and <a href="https://postcss.org/">PostCSS</a>.
+        </p>
     </ParagraphSerif>
 
     <ParagraphSerif>
         <svelte:fragment slot="title">The Font Designers</svelte:fragment>
-        <p>This site uses some beautiful fonts from <a href="https://fonts.google.com/">Google Fonts</a> via <a href="https://fontsource.org/">Fontsource</a>.<br />
-        That's why I'd also like to thank the designers behind these fonts:</p>
+        <p>
+            This site uses some beautiful fonts from <a href="https://fonts.google.com/">Google Fonts</a> via <a href="https://fontsource.org/">Fontsource</a>.<br />
+            That's why I'd also like to thank the designers behind these fonts:
+        </p>
         <ul>
             <li>
                 <a href="https://fonts.google.com/specimen/Old+Standard+TT">Old Standard TT</a> by Alexey Kryukov
@@ -100,13 +106,20 @@
                 <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>,
                 <a href="https://commons.wikimedia.org/w/index.php?curid=68009697">Link</a>
             </li>
+            <li>
+                Four-leaf clover.svg by <a href="https://openclipart.org/artist/Firkin">Firkin - Openclipart</a>,
+                <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>,
+                <a href="https://commons.wikimedia.org/w/index.php?curid=88923308">Link</a>
+            </li>
         </ul>
         <p>And a photo from the Queens speech in 2022: <a href="https://flic.kr/p/2njJb6b">Copyright House of Lords 2022 / Photography by Annabel Moeller</a></p>
     </ParagraphSerif>
     <ParagraphSerif>
         <svelte:fragment slot="title">Coolors</svelte:fragment>
-        <p>I have protanomaly, a form of color blindness. That's why I used <a href="https://coolors.co/">Coolors</a> by <a href="https://fabrizio.io/">Fabrizio Bianchi</a>
-        to find a color palette that is also aesthetically pleasing to people with regular color vision.</p>
+        <p>
+            I have protanomaly, a form of color blindness. That's why I used <a href="https://coolors.co/">Coolors</a> by <a href="https://fabrizio.io/">Fabrizio Bianchi</a>
+            to find a color palette that is also aesthetically pleasing to people with regular color vision.
+        </p>
     </ParagraphSerif>
 </SiteColumn>
 

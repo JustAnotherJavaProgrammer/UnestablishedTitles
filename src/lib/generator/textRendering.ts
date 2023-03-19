@@ -30,15 +30,8 @@ export function fitTextWithinRect(
     if (text == null || text.length <= 0)
         return;
     if (!textWrap) {
-        // g.setFont(g.getFont().deriveFont((float) Math.max(rect.width, rect.height)));
-        // FontMetrics metrics = g.getFontMetrics();
-        // Rectangle2D stringBounds = metrics.getStringBounds(text, g);
-        const metrics = new FontMetrics(font, Math.max(rect.width, rect.height));
-        let stringBounds: Bounds = metrics.getStringBounds(text);
-        const scale: number = Math.min(rect.width / stringBounds.width,
-            rect.height / stringBounds.height);
-        metrics.scale(scale);
-        stringBounds = metrics.getStringBounds(text);
+        const metrics = new FontMetrics(font, opts?.size != null ? opts.size : maxFontSizeWithinBounds(text, font, rect, false));
+        const stringBounds: Bounds = metrics.getStringBounds(text);
         let x: number = rect.x;
         switch (align) {
             case Alignment.LEADING:
@@ -50,8 +43,8 @@ export function fitTextWithinRect(
             default:
                 x += (rect.width - stringBounds.width) / 2;
         }
-        console.log("stringBounds:", stringBounds);
-        console.log("lineCount", countLines(text));
+        // console.log("stringBounds:", stringBounds);
+        // console.log("lineCount", countLines(text));
         let additionalVerticalOffset = metrics.getAscent();
         if (countLines(text) > 1) {
             if (vertAlign === Alignment.CENTER)
@@ -65,24 +58,7 @@ export function fitTextWithinRect(
         }, opts);
         return;
     }
-    let fontSize: number = 1.0;
-    while (true) {
-        // g.setFont(g.getFont().deriveFont(fontSize + 1));
-        // FontMetrics metrics = g.getFontMetrics();
-        const metrics: FontMetrics = new FontMetrics(font, fontSize + 1);
-        const linesTemp: string[] = stringUtils.wrap(text, metrics, rect.width);
-        // TODO: join linesTemp with "\n" and use getStringBounds directly (once)
-        let height = 0;
-        for (let i = 0; i < linesTemp.length; i++) {
-            let lineHeight = metrics.getStringBounds(linesTemp[i]).height;
-            height += lineHeight;
-            if (i != linesTemp.length - 1)
-                height += 0.1 * lineHeight;
-        }
-        if (height > rect.height)
-            break;
-        fontSize++;
-    }
+    const fontSize: number = opts?.size != null ? opts.size : maxFontSizeWithinBounds(text, font, rect);
     const metrics = new FontMetrics(font, fontSize);
     const lines: string[] = stringUtils.wrap(text, metrics, rect.width);
     // TODO: maybe not render text as individual lines with custom spacing
@@ -103,6 +79,31 @@ export function fitTextWithinRect(
         drawLineInsideRect(line, page, metrics, rect, { x, y: y - metrics.getAscent() }, opts);
         y -= stringBounds.height/* * 1.1*/;
     }
+}
+
+export function maxFontSizeWithinBounds(text: string, font: PDFFont, bounds: Bounds, textWrap: boolean = true): number {
+    if (!textWrap) {
+        const metrics = new FontMetrics(font, Math.max(bounds.width, bounds.height));
+        let stringBounds: Bounds = metrics.getStringBounds(text);
+        const scale: number = Math.min(bounds.width / stringBounds.width,
+            bounds.height / stringBounds.height);
+        metrics.scale(scale);
+        return metrics.size;
+    }
+    let fontSize: number = 1.0;
+    let increment = 16;
+    while (increment > 0.0001) {
+        const metrics: FontMetrics = new FontMetrics(font, fontSize + increment);
+        const linesTemp: string[] = stringUtils.wrap(text, metrics, bounds.width);
+        // TODO: join linesTemp with "\n" and use getStringBounds directly (once)
+        let height = linesTemp.length * metrics.getLineHeight();
+        if (height > bounds.height) {
+            increment /= 2;
+            continue;
+        }
+        fontSize += increment;
+    }
+    return fontSize;
 }
 
 // Emulate the Graphics2D.drawString method behavior
