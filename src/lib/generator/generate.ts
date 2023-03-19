@@ -1,13 +1,13 @@
 import { PDFDocument } from "pdf-lib";
-import { PageSizes, PDFImage, PDFPage, rectangle } from "pdf-lib/cjs/api";
+import { BlendMode, PageSizes, PDFImage, PDFPage, rectangle, rgb, type PDFPageDrawTextOptions } from "pdf-lib/cjs/api";
 import fontkit from "@pdf-lib/fontkit";
 // @ts-ignore
 import oldPaper from "$lib/assets/img/certificate/kiwihug-3gifzboyZk0-unsplash.jpg?rotate=270";
 import { Alignment, fitTextWithinRect, type Rectangle } from "./textRendering";
 
-const title = "Proclamation";
+const docTitle = "Proclamation";
 const firstLine = "Whereas,"
-const secondLine = (title: string, name: string) => `${title} ${name}`;
+const secondLine = (title: string, name: string) => `${title} ${name}`.toLocaleUpperCase();
 const topLeft = (title: string) => `(hereafter referred to as ${title}), has, by way of notice, ` +
     `this seventh day of october in the year two thousand and twenty two, in the first year of the Reign of ` +
     `Our Sovereign King Charles the Third, by the Grace of God, of the United Kingdom of Great Britain and Northern Ireland ` +
@@ -42,7 +42,10 @@ const bottom = (title: string, name: string) => `${name}, by the virtue of the o
 let oldPaper_arrBuff: ArrayBuffer;
 let fancyFont_arrBuff: ArrayBuffer;
 
-export default async function generateCertificate() {
+const greenOpts: PDFPageDrawTextOptions = { color: rgb(86 / 255, 110 / 255, 61 / 255), blendMode: BlendMode.Multiply };
+const blackOpts: PDFPageDrawTextOptions = { color: rgb(0, 0, 0), blendMode: BlendMode.Multiply };
+
+export default async function generateCertificate(title: string, name: string) {
     const pdfDoc = await PDFDocument.create();
     pdfDoc.registerFontkit(fontkit);
     const page = pdfDoc.addPage([PageSizes.A4[1], PageSizes.A4[0]]); // A4 landscape
@@ -53,14 +56,32 @@ export default async function generateCertificate() {
         const img_oldPaper = await pdfDoc.embedJpg(oldPaper_arrBuff);
         fullPageImage(page, img_oldPaper);
     }
+
+    page.drawRectangle({
+        ...percentageRect(page, { x: 3, y: 3, width: 94, height: 94 }),
+        borderColor: rgb(1, 215/255, 0),
+        borderWidth: 1* Math.min(page.getWidth(), page.getHeight()) / 100,
+        blendMode: BlendMode.Multiply,
+    });
+
     // Set fancy font
     // {
     if (fancyFont_arrBuff === undefined)
         fancyFont_arrBuff = await (await fetch("/pdfFonts/UnifrakturCook-Bold.ttf")).arrayBuffer();
     const font = await pdfDoc.embedFont(fancyFont_arrBuff, { customName: "UnifrakturCook" });
-
-    fitTextWithinRect(page, font, percentageRect({x: 5, y: 5, width: 90, height: 10}), "Proclamation", true, Alignment.CENTER);
     // }
+
+    // Draw text
+
+    fitTextWithinRect(page, font, percentageRect(page, { x: 5, y: 5, width: 90, height: 10 }), docTitle, false, greenOpts, Alignment.CENTER);
+    fitTextWithinRect(page, font, percentageRect(page, { x: 5, y: 10, width: 20, height: 5 }), firstLine, false, greenOpts, Alignment.LEADING);
+    fitTextWithinRect(page, font, percentageRect(page, { x: 5, y: 15, width: 42.5, height: 7.5 }), secondLine(title, name), false, blackOpts, Alignment.LEADING);
+    fitTextWithinRect(page, font, percentageRect(page, { x: 5, y: 22.5, width: 42.5, height: 52.5 }), topLeft(title), true, blackOpts, Alignment.LEADING);
+    fitTextWithinRect(page, font, percentageRect(page, { x: 52.5, y: 17.5, width: 42.5, height: 5 }), topRightFirstLine, false, greenOpts, Alignment.LEADING);
+    fitTextWithinRect(page, font, percentageRect(page, { x: 52.5, y: 22.5, width: 42.5, height: 52.5 }), topRight(title), true, blackOpts, Alignment.LEADING);
+    fitTextWithinRect(page, font, percentageRect(page, { x: 5, y: 75, width: 90, height: 5 }), bottomFirstLine, false, greenOpts, Alignment.LEADING);
+    fitTextWithinRect(page, font, percentageRect(page, { x: 5, y: 80, width: 65, height: 15 }), bottom(title, name), true, blackOpts, Alignment.LEADING);
+
     return pdfDoc.saveAsBase64({ dataUri: true });
 }
 
@@ -81,6 +102,6 @@ function fullPageImage(page: PDFPage, image: PDFImage) {
 function percentageRect(page: PDFPage, rect: Rectangle): Rectangle {
     const pageWidth = page.getWidth();
     const pageHeight = page.getHeight();
-    const rectHeight = pageHeight * rect.height * 100;
-    return { x: pageWidth * rect.x * 100, y: pageHeight - (pageHeight * rect.y * 100) - rectHeight, width: pageWidth * rect.width * 100, height: rectHeight };
+    const rectHeight = pageHeight * rect.height / 100;
+    return { x: pageWidth * rect.x / 100, y: pageHeight - (pageHeight * rect.y / 100) - rectHeight, width: pageWidth * rect.width / 100, height: rectHeight };
 }

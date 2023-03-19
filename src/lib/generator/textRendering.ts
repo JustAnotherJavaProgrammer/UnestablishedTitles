@@ -1,4 +1,5 @@
-import type { PDFFont, PDFPage } from "pdf-lib";
+import type { PDFFont, PDFPage, PDFPageDrawTextOptions } from "pdf-lib";
+import { debug } from "svelte/internal";
 import *  as stringUtils from "./stringUtils";
 
 export enum Alignment {
@@ -17,7 +18,15 @@ export type Bounds = {
 
 export type Rectangle = Point & Bounds;
 
-export function fitTextWithinRect(page: PDFPage, font: PDFFont, rect: Rectangle, text: string, textWrap: boolean, align: Alignment = Alignment.CENTER): void {
+export function fitTextWithinRect(
+    page: PDFPage,
+    font: PDFFont,
+    rect: Rectangle,
+    text: string,
+    textWrap: boolean,
+    opts?: PDFPageDrawTextOptions,
+    align: Alignment = Alignment.CENTER,
+    vertAlign: Alignment = Alignment.CENTER): void {
     if (text == null || text.length <= 0)
         return;
     if (!textWrap) {
@@ -41,7 +50,19 @@ export function fitTextWithinRect(page: PDFPage, font: PDFFont, rect: Rectangle,
             default:
                 x += (rect.width - stringBounds.width) / 2;
         }
-        drawLineInsideRect(text, page, metrics, rect, { x, y: rect.y + ((rect.height - stringBounds.height) / 2) + metrics.getAscent() });
+        console.log("stringBounds:", stringBounds);
+        console.log("lineCount", countLines(text));
+        let additionalVerticalOffset = metrics.getAscent();
+        if (countLines(text) > 1) {
+            if (vertAlign === Alignment.CENTER)
+                additionalVerticalOffset = metrics.getLineHeight(true)
+        } else if (vertAlign === Alignment.CENTER) {
+            additionalVerticalOffset = rect.height - (metrics.getDescent() / 2);
+        }
+        drawLineInsideRect(text, page, metrics, rect, {
+            x,
+            y: rect.y + ((rect.height + stringBounds.height) / 2) - additionalVerticalOffset
+        }, opts);
         return;
     }
     let fontSize: number = 1.0;
@@ -65,7 +86,7 @@ export function fitTextWithinRect(page: PDFPage, font: PDFFont, rect: Rectangle,
     const metrics = new FontMetrics(font, fontSize);
     const lines: string[] = stringUtils.wrap(text, metrics, rect.width);
     // TODO: maybe not render text as individual lines with custom spacing
-    let y = rect.y;
+    let y = rect.y + rect.height;
     for (const line of lines) {
         const stringBounds: Bounds = getStringBounds(line, font, fontSize);
         let x = rect.x;
@@ -79,14 +100,14 @@ export function fitTextWithinRect(page: PDFPage, font: PDFFont, rect: Rectangle,
             default:
                 x += (rect.width - stringBounds.width) / 2;
         }
-        drawLineInsideRect(line, page, metrics, rect, { x, y: y + getAscent(font, fontSize) });
-        y += stringBounds.height * 1.1;
+        drawLineInsideRect(line, page, metrics, rect, { x, y: y - metrics.getAscent() }, opts);
+        y -= stringBounds.height/* * 1.1*/;
     }
 }
 
 // Emulate the Graphics2D.drawString method behavior
-function drawLineInsideRect(line: string, page: PDFPage, metrics: FontMetrics, rect: Rectangle, position: Point): void {
-    page.drawText(line, { x: position.x, y: rect.y + rect.height - position.y, font: metrics.font, size: metrics.size, lineHeight: metrics.size * 1.1 });
+function drawLineInsideRect(line: string, page: PDFPage, metrics: FontMetrics, rect: Rectangle, position: Point, opts?: PDFPageDrawTextOptions): void {
+    page.drawText(line, { ...opts, x: position.x, y: position.y, font: metrics.font, size: metrics.size, lineHeight: metrics.size * 1.1 });
 }
 
 export function getStringBounds(text: string, font: PDFFont, fontSize: number): Bounds {
@@ -102,6 +123,10 @@ export function getAscent(font: PDFFont, fontSize: number): number {
     return font.heightAtSize(fontSize, { descender: false });
 }
 
+export function getDescent(font: PDFFont, fontSize: number): number {
+    return font.heightAtSize(fontSize, { descender: true }) - getAscent(font, fontSize);
+}
+
 export class FontMetrics {
     font: PDFFont;
     size: number;
@@ -115,12 +140,21 @@ export class FontMetrics {
         return this.font.widthOfTextAtSize(str, this.size);
     }
 
+    getLineHeight(raw = false): number {
+        const factor = raw ? 1 : 1.1;
+        return this.font.heightAtSize(this.size) * factor;
+    }
+
     getStringBounds(str: string): Bounds {
         return getStringBounds(str, this.font, this.size);
     }
 
     getAscent(): number {
         return getAscent(this.font, this.size);
+    }
+
+    getDescent(): number {
+        return getDescent(this.font, this.size);
     }
 
     scale(scale: number): void {

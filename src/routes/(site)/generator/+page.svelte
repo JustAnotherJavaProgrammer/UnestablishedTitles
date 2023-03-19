@@ -6,7 +6,7 @@ import MetaInfo from "$lib/elements/MetaInfo.svelte";
 
     async function onGenerate(e: MouseEvent) {
         console.log("Generate");
-        window.open(await generateCertificate());
+        window.open(await generateCertificate("Lord", "John Smith"));
         console.log("Done");
     }
 </script>
