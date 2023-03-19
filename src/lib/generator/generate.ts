@@ -1,5 +1,5 @@
 import { PDFDocument } from "pdf-lib";
-import { BlendMode, PageSizes, PDFImage, PDFPage, rectangle, rgb, type PDFPageDrawTextOptions } from "pdf-lib/cjs/api";
+import { BlendMode, PageSizes, PDFImage, PDFPage, rgb, type PDFPageDrawTextOptions } from "pdf-lib/cjs/api";
 import fontkit from "@pdf-lib/fontkit";
 // @ts-ignore
 import oldPaper from "$lib/assets/img/certificate/kiwihug-3gifzboyZk0-unsplash.jpg?rotate=270";
@@ -36,7 +36,6 @@ const topLeft = (title: string | string[]) => `(hereafter referred to as ${Array
         return year;
     })()}, in the ${(() => {
         const timeOfReign = new Date().getTime() - startCharlesReign.getTime();
-        console.log("years", timeOfReign / (1000 * 60 * 60 * 24 * 365.25));
         const years = Math.floor(timeOfReign / (1000 * 60 * 60 * 24 * 365.25)) + 1;
         if(numbers.nth.has(years))
             return numbers.nth.get(years);

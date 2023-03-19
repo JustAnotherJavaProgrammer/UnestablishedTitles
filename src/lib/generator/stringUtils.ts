@@ -1,5 +1,14 @@
 import type { FontMetrics } from "./textRendering";
 
+/**
+ * Code in this file originally based on Java code, heavily modified since then.
+ * Original code available at:
+ * http://www.java2s.com/Code/Java/2D-Graphics-GUI/WrapstringaccordingtoFontMetrics.htm)
+ * 
+ * Java code written by:
+ * @author Jim Menard, <a href="mailto:jimm@io.com">jimm@io.com</a>
+ */
+
 export function wrap(str: Readonly<string>, fm: Readonly<FontMetrics>, maxWidth: Readonly<number>): string[] {
     const lines = splitIntoLines(str);
     if (lines.length === 0)
