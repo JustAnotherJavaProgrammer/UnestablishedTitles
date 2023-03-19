@@ -5,6 +5,9 @@ import fontkit from "@pdf-lib/fontkit";
 import oldPaper from "$lib/assets/img/certificate/kiwihug-3gifzboyZk0-unsplash.jpg?rotate=270";
 import coatOfArms from "$lib/assets/img/certificate/coat_of_arms.png";
 import { Alignment, fitTextWithinRect, maxFontSizeWithinBounds, type Rectangle } from "./textRendering";
+import * as numbers from "./numbers";
+
+const startCharlesReign = new Date("2022-09-08");
 
 const docTitle = "Proclamation";
 const firstLine = "Whereas,"
@@ -14,10 +17,31 @@ const secondLine = (title: string | string[], name: string | string[]) => {
     }
     return `${title} ${name}`.toLocaleUpperCase()
 };
-// TODO: update date
 const topLeft = (title: string | string[]) => `(hereafter referred to as ${Array.isArray(title) ? title.join(" and ") : title}), ` +
     `${Array.isArray(title) && title.length !== 1 ? "have" : "has"}, by way of notice, ` +
-    `this seventh day of october in the year two thousand and twenty two, in the first year of the Reign of ` +
+    `this ${(() => {
+        const day = new Date().getDate();
+        if(numbers.nth.has(day))
+            return numbers.nth.get(day);
+        return day;
+    })()} day of ${(() => {
+        const month = new Date().getMonth() + 1;
+        if(numbers.months.has(month))
+            return numbers.months.get(month);
+        return month;
+    })()} in the year ${(() => {
+        const year = new Date().getFullYear();
+        if(numbers.years.has(year))
+            return numbers.years.get(year);
+        return year;
+    })()}, in the ${(() => {
+        const timeOfReign = new Date().getTime() - startCharlesReign.getTime();
+        console.log("years", timeOfReign / (1000 * 60 * 60 * 24 * 365.25));
+        const years = Math.floor(timeOfReign / (1000 * 60 * 60 * 24 * 365.25)) + 1;
+        if(numbers.nth.has(years))
+            return numbers.nth.get(years);
+        return years;
+    })()} year of the Reign of ` +
     `Our Sovereign King Charles the Third, by the Grace of God, of the United Kingdom of Great Britain and Northern Ireland ` +
     `and of His other Realms and Territories King, Head of the Commonwealth, Defender of the Faith, ` +
     `delivered unto us the intention to download, and us with the intention to generate, ` +
