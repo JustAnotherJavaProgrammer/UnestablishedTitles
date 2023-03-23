@@ -2,10 +2,12 @@ import { PDFDocument } from "pdf-lib";
 import { BlendMode, PageSizes, PDFImage, PDFPage, rgb, type PDFPageDrawTextOptions } from "pdf-lib/cjs/api";
 import fontkit from "@pdf-lib/fontkit";
 // @ts-ignore
-import oldPaper from "$lib/assets/img/certificate/kiwihug-3gifzboyZk0-unsplash.jpg?rotate=270";
-import coatOfArms from "$lib/assets/img/certificate/coat_of_arms.png";
+// import oldPaper from "$lib/assets/img/certificate/kiwihug-3gifzboyZk0-unsplash.jpg?rotate=270";
+// import coatOfArms from "$lib/assets/img/certificate/coat_of_arms.png";
 import { Alignment, fitTextWithinRect, maxFontSizeWithinBounds, type Rectangle } from "./textRendering";
 import * as numbers from "./numbers";
+const oldPaper = "/certificate/kiwihug-3gifzboyZk0-unsplash.jpg";
+const coatOfArms = "/certificate/coat_of_arms.png";
 
 const startCharlesReign = new Date("2022-09-08");
 
