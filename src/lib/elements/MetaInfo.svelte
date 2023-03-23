@@ -1,5 +1,5 @@
 <script lang="ts">
-    import defaultImage from "$lib/assets/img/OpenGraph_Preview.png";
+    import defaultImage from "$lib/assets/img/OpenGraph_Preview_1.png";
 
     import {page} from "$app/stores";
     export let title: string | undefined;
