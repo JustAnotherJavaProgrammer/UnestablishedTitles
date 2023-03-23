@@ -52,7 +52,7 @@
                 <a href="https://fonts.google.com/specimen/Roboto" target="_blank">Roboto</a> by Christian Robertson
             </li>
             <li>
-                <a href="https://fonts.google.com/specimen/UnifrakturCook" target="_blank">UnifrakturCook</a> by j. 'mach' wust
+                <a href="https://github.com/ctrlcctrlv/chomsky">Chomsky</a> by Fredrick R. Brennan
             </li>
         </ul>
     </ParagraphSerif>

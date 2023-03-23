@@ -27,11 +27,6 @@ $max-content-width: 1050px;
     font-family: "Roboto", sans-serif;
 }
 
-@mixin font-text-fancy {
-    font-family: "UnifrakturCook", "Old Standard TT", cursive, serif;
-    font-weight: 700;
-}
-
 @mixin button {
     @include font-text-serif;
     box-sizing: border-box;

@@ -115,8 +115,8 @@ export default async function generateCertificate(title: string | string[], name
     // Set fancy font
     // {
     if (fancyFont_arrBuff === undefined)
-        fancyFont_arrBuff = await (await fetch("/pdfFonts/UnifrakturCook-Bold.ttf")).arrayBuffer();
-    const font = await pdfDoc.embedFont(fancyFont_arrBuff, { customName: "UnifrakturCook" });
+        fancyFont_arrBuff = await (await fetch("/pdfFonts/Chomsky/Chomsky.otf")).arrayBuffer();
+    const font = await pdfDoc.embedFont(fancyFont_arrBuff, { customName: "Chomsky" });
     // }
 
     // Draw text

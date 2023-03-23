@@ -53,13 +53,20 @@
     #subpages {
         flex: 1;
         display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
         margin-left: 1rem;
         font-size: 1.175rem;
         letter-spacing: 0.075rem;
         gap: 2rem;
+        text-align: end;
+        @media screen and (min-width: $breakpoint-xs) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            text-align: inherit;
+        }
     }
 
     a {

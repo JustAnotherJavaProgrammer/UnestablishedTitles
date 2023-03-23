@@ -5,7 +5,6 @@
     import "@fontsource/bebas-neue/400.css";
     import "@fontsource/crimson-text/400.css";
     import "@fontsource/crimson-text/600.css";
-    import "@fontsource/unifrakturcook";
     import "@fontsource/roboto/400.css";
     import Footer from "$lib/elements/Footer.svelte";
     import HotizontalDivider from "$lib/elements/HotizontalDivider.svelte";
@@ -34,6 +33,8 @@
     :global(html) {
         scroll-behavior: smooth;
         height: 100%;
+        margin: 0;
+        padding: 0;
         // min-width: 100%;
     }
 
