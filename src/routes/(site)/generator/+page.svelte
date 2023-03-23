@@ -1,10 +1,12 @@
 <script lang="ts">
+    import { page } from "$app/stores";
     import MetaInfo from "$lib/elements/MetaInfo.svelte";
     import Spinner from "$lib/elements/Spinner.svelte";
     import { generatePdf } from "$lib/generator/generationHelper";
     import PackSizeChooser from "$lib/generator/PackSizeChooser.svelte";
     import TitleSelectionGroup from "$lib/generator/TitleSelectionGroup.svelte";
     import HeadingSerif from "$lib/layout/HeadingSerif.svelte";
+    import packInfo from "$lib/packs";
 
     function triggerGeneration(): Promise<Uint8Array> {
         if (title1 == null || title1.trim().length < 1) throw new Error("Please select a title for the certificate.");
@@ -60,6 +62,16 @@
     let name1: string = "";
     let title2: string | null = null;
     let name2: string = "";
+    // Apply URL parameters
+    if ($page.url.searchParams.has("title")) {
+        const pckParam = $page.url.searchParams.get("title");
+        const prefillPack = packInfo.find((pack) => pack.formInfo.titleParam === pckParam);
+        if (prefillPack != null) {
+            packSize = prefillPack.formInfo.packSize;
+            if (prefillPack.formInfo.title1 != null) title1 = prefillPack.formInfo.title1;
+            if (prefillPack.formInfo.title2 != null) title2 = prefillPack.formInfo.title2;
+        }
+    }
 
     let errorMsg: string | null = null;
     let generationInProgress = false;

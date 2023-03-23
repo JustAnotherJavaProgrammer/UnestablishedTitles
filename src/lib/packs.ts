@@ -40,6 +40,12 @@ export type PackInfo = {
     tagline?: string;
     generatorHref: string;
     title: string | null;
+    formInfo: {
+        titleParam: string;
+        packSize: 1 | 2;
+        title1?: string;
+        title2?: string;
+    };
 };
 
 const packInfo: ReadonlyArray<PackInfo> = [
@@ -51,7 +57,12 @@ const packInfo: ReadonlyArray<PackInfo> = [
             alt: "Giant's Causeway"
         },
         generatorHref: "/generator?title=lord",
-        title: "Lord"
+        title: "Lord",
+        formInfo: {
+            titleParam: "lord",
+            packSize: 1,
+            title1: "Lord",
+        },
     },
     {
         name: "Ladyship Pack",
@@ -61,7 +72,12 @@ const packInfo: ReadonlyArray<PackInfo> = [
             alt: "Castle On The Hill"
         },
         generatorHref: "/generator?title=lady",
-        title: "Lady"
+        title: "Lady",
+        formInfo: {
+            titleParam: "lady",
+            packSize: 1,
+            title1: "Lady",
+        },
     },
     {
         name: "Couple Title Pack (Lord/Lady)",
@@ -71,7 +87,13 @@ const packInfo: ReadonlyArray<PackInfo> = [
             alt: "Donegal, Ireland"
         },
         generatorHref: "/generator?title=irishcouple",
-        title: null
+        title: null,
+        formInfo: {
+            titleParam: "irishcouple",
+            packSize: 2,
+            title1: "Lord",
+            title2: "Lady",
+        },
     },
     {
         name: "Sir Title Pack",
@@ -81,7 +103,12 @@ const packInfo: ReadonlyArray<PackInfo> = [
             alt: "Westminister Palace in the evening"
         },
         generatorHref: "/generator?title=sir",
-        title: "Sir"
+        title: "Sir",
+        formInfo: {
+            titleParam: "sir",
+            packSize: 1,
+            title1: "Sir",
+        }
     },
     {
         name: "Dame Title Pack",
@@ -91,7 +118,12 @@ const packInfo: ReadonlyArray<PackInfo> = [
             alt: "Buckingham Palace"
         },
         generatorHref: "/generator?title=dame",
-        title: "Dame"
+        title: "Dame",
+        formInfo: {
+            titleParam: "dame",
+            packSize: 1,
+            title1: "Dame",
+        },
     },
     {
         name: "Couple Title Pack (Sir/Dame)",
@@ -102,7 +134,13 @@ const packInfo: ReadonlyArray<PackInfo> = [
         },
         generatorHref: "/generator?title=englishcouple",
         tagline: "Photo: Copyright House of Lords 2022 / Photography by Annabel Moeller",
-        title: null
+        title: null,
+        formInfo: {
+            titleParam: "englishcouple",
+            packSize: 2,
+            title1: "Sir",
+            title2: "Dame",
+        },
     },
     {
         name: "Master Pack",
@@ -112,7 +150,12 @@ const packInfo: ReadonlyArray<PackInfo> = [
             alt: "A plantation house in South Carolina"
         },
         generatorHref: "/generator?title=master",
-        title: "Master"
+        title: "Master",
+        formInfo: {
+            titleParam: "master",
+            packSize: 1,
+            title1: "Master",
+        },
     },
     {
         name: "Mistress Pack",
@@ -122,7 +165,12 @@ const packInfo: ReadonlyArray<PackInfo> = [
             alt: "Crichel House, Dorset, from across the lake, in the wonderful Dorset countryside."
         },
         generatorHref: "/generator?title=mistress",
-        title: "Mistress"
+        title: "Mistress",
+        formInfo: {
+            titleParam: "mistress",
+            packSize: 1,
+            title1: "Mistress",
+        },
     },
     {
         name: "Couple Title Pack (Master/Mistress)",
@@ -132,7 +180,13 @@ const packInfo: ReadonlyArray<PackInfo> = [
             alt: "Kynance Mews, London, UK"
         },
         generatorHref: "/generator?title=mmcouple",
-        title: null
+        title: null,
+        formInfo: {
+            titleParam: "mmcouple",
+            packSize: 2,
+            title1: "Master",
+            title2: "Mistress",
+        },
     },
     {
         name: "Couple Title Pack (Custom)",
@@ -143,7 +197,11 @@ const packInfo: ReadonlyArray<PackInfo> = [
         },
         generatorHref: "/generator?title=couple",
         tagline: "Every couple is special, so why not combine the titles of your choice to express how you feel for each other?",
-        title: null
-    }
+        title: null,
+        formInfo: {
+            titleParam: "couple",
+            packSize: 2,
+        },
+    },
 ];
 export default packInfo;
