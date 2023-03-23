@@ -18,6 +18,7 @@
                 { text: "Privacy Policy", href: "/legal/privacypolicy" },
                 { text: "Impressum", href: "/legal/impressum" },
                 { text: "Datenschutzerklärung", href: "/legal/datenschutzerklaerung" },
+                { text: "Source code on GitHub", href: "https://github.com/JustAnotherJavaProgrammer/UnestablishedTitles"}
             ]}><svelte:fragment slot="title">Legal</svelte:fragment></FooterSection
         >
     </div>
