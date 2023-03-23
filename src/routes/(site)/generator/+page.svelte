@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { browser } from "$app/environment";
     import { page } from "$app/stores";
     import MetaInfo from "$lib/elements/MetaInfo.svelte";
     import Spinner from "$lib/elements/Spinner.svelte";
@@ -64,7 +65,7 @@
     let title2: string | null = null;
     let name2: string = "";
     // Apply URL parameters
-    if ($page.url.searchParams.has("title")) {
+    if (browser && $page.url.searchParams.has("title")) {
         const pckParam = $page.url.searchParams.get("title");
         const prefillPack = packInfo.find((pack) => pack.formInfo.titleParam === pckParam);
         if (prefillPack != null) {
