@@ -39,6 +39,7 @@ export type PackInfo = {
     };
     tagline?: string;
     generatorHref: string;
+    title: string | null;
 };
 
 const packInfo: ReadonlyArray<PackInfo> = [
@@ -49,7 +50,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             srcset: IrishMenPack_srcset,
             alt: "Giant's Causeway"
         },
-        generatorHref: "/generator?title=lord"
+        generatorHref: "/generator?title=lord",
+        title: "Lord"
     },
     {
         name: "Ladyship Pack",
@@ -58,7 +60,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             srcset: IrishWomenPack_srcset,
             alt: "Castle On The Hill"
         },
-        generatorHref: "/generator?title=lady"
+        generatorHref: "/generator?title=lady",
+        title: "Lady"
     },
     {
         name: "Couple Title Pack (Lord/Lady)",
@@ -67,7 +70,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             srcset: IrishCouplePack_srcset,
             alt: "Donegal, Ireland"
         },
-        generatorHref: "/generator?title=irishcouple"
+        generatorHref: "/generator?title=irishcouple",
+        title: null
     },
     {
         name: "Sir Title Pack",
@@ -76,7 +80,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             srcset: EnglishNobilityManPack_srcset,
             alt: "Westminister Palace in the evening"
         },
-        generatorHref: "/generator?title=sir"
+        generatorHref: "/generator?title=sir",
+        title: "Sir"
     },
     {
         name: "Dame Title Pack",
@@ -85,7 +90,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             srcset: EnglishNobilityWomanPack_srcset,
             alt: "Buckingham Palace"
         },
-        generatorHref: "/generator?title=dame"
+        generatorHref: "/generator?title=dame",
+        title: "Dame"
     },
     {
         name: "Couple Title Pack (Sir/Dame)",
@@ -95,7 +101,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             alt: "The Queen's Speech 2022"
         },
         generatorHref: "/generator?title=englishcouple",
-        tagline: "Photo: Copyright House of Lords 2022 / Photography by Annabel Moeller"
+        tagline: "Photo: Copyright House of Lords 2022 / Photography by Annabel Moeller",
+        title: null
     },
     {
         name: "Master Pack",
@@ -104,7 +111,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             srcset: MasterPack_srcset,
             alt: "A plantation house in South Carolina"
         },
-        generatorHref: "/generator?title=master"
+        generatorHref: "/generator?title=master",
+        title: "Master"
     },
     {
         name: "Mistress Pack",
@@ -113,7 +121,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             srcset: MistressPack_srcset,
             alt: "Crichel House, Dorset, from across the lake, in the wonderful Dorset countryside."
         },
-        generatorHref: "/generator?title=mistress"
+        generatorHref: "/generator?title=mistress",
+        title: "Mistress"
     },
     {
         name: "Couple Title Pack (Master/Mistress)",
@@ -122,7 +131,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             srcset: MasterCouplePack_srcset,
             alt: "Kynance Mews, London, UK"
         },
-        generatorHref: "/generator?title=mmcouple"
+        generatorHref: "/generator?title=mmcouple",
+        title: null
     },
     {
         name: "Couple Title Pack (Custom)",
@@ -132,7 +142,8 @@ const packInfo: ReadonlyArray<PackInfo> = [
             alt: "Carsington Water, United Kingdom"
         },
         generatorHref: "/generator?title=couple",
-        tagline: "Every couple is special, so why not combine the titles of your choice to express how you feel for each other?"
+        tagline: "Every couple is special, so why not combine the titles of your choice to express how you feel for each other?",
+        title: null
     }
 ];
 export default packInfo;

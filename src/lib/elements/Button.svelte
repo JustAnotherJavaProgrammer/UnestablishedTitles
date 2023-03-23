@@ -2,7 +2,6 @@
     export let type: "button" | "submit" | "reset" | "a" = "button";
     export let color: "red" | "green" | "blue" = "red";
     export let href = "/";
-    export let id: string = "";
 </script>
 
 {#if type == "a"}
@@ -10,7 +9,7 @@
         <slot />
     </a>
 {:else if type == "submit"}
-    <input type="submit" {id} /><label for={id} class="button {color}"><slot /></label>
+    <label class="button {color}"><input type="submit" /><slot /></label>
 {:else if type == "reset"}
     <input type="reset" class="button {color}" />
 {:else}
@@ -32,14 +31,7 @@
     }
 
     label, a, button, input {
-        @include font-text-serif;
-        box-sizing: border-box;
-        padding: 0.625rem;
-        border: 0.2rem solid;
-        text-decoration: none;
-        transition: background-color 0.1s, color 0.1s;
-        line-height: normal;
-        cursor: pointer;
+        @include button;
 
         &.red {
             border-color: $red;
@@ -51,13 +43,7 @@
             }
         }
         &.green {
-            border-color: $green;
-            background-color: $green;
-            color: $white;
-            &:hover {
-                background-color: $white;
-                color: $green;
-            }
+            @include button-green;
         }
         &.blue {
             border-color: $blue;

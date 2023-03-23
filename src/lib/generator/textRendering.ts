@@ -54,7 +54,7 @@ export function fitTextWithinRect(
         }
         drawLineInsideRect(text, page, metrics, rect, {
             x,
-            y: rect.y + ((rect.height + stringBounds.height) / 2) - additionalVerticalOffset
+            y: Math.max(rect.y, rect.y + ((rect.height + stringBounds.height) / 2) - additionalVerticalOffset)
         }, opts);
         return;
     }

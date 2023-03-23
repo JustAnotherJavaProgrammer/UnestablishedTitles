@@ -13,7 +13,7 @@ const docTitle = "Proclamation";
 const firstLine = "Whereas,"
 const secondLine = (title: string | string[], name: string | string[]) => {
     if (Array.isArray(title) && Array.isArray(name)) {
-        return title.map((title, index) => `${title} ${name[index]}`).join(" and ")
+        return title.map((title, index) => `${title} ${name[index]}`.toLocaleUpperCase()).join(" and ")
     }
     return `${title} ${name}`.toLocaleUpperCase()
 };
@@ -21,23 +21,23 @@ const topLeft = (title: string | string[]) => `(hereafter referred to as ${Array
     `${Array.isArray(title) && title.length !== 1 ? "have" : "has"}, by way of notice, ` +
     `this ${(() => {
         const day = new Date().getDate();
-        if(numbers.nth.has(day))
+        if (numbers.nth.has(day))
             return numbers.nth.get(day);
         return day;
     })()} day of ${(() => {
         const month = new Date().getMonth() + 1;
-        if(numbers.months.has(month))
+        if (numbers.months.has(month))
             return numbers.months.get(month);
         return month;
     })()} in the year ${(() => {
         const year = new Date().getFullYear();
-        if(numbers.years.has(year))
+        if (numbers.years.has(year))
             return numbers.years.get(year);
         return year;
     })()}, in the ${(() => {
         const timeOfReign = new Date().getTime() - startCharlesReign.getTime();
         const years = Math.floor(timeOfReign / (1000 * 60 * 60 * 24 * 365.25)) + 1;
-        if(numbers.nth.has(years))
+        if (numbers.nth.has(years))
             return numbers.nth.get(years);
         return years;
     })()} year of the Reign of ` +
@@ -80,7 +80,7 @@ let coatOfArms_arrBuff: ArrayBuffer;
 const greenOpts: PDFPageDrawTextOptions = { color: rgb(86 / 255, 110 / 255, 61 / 255), blendMode: BlendMode.Multiply };
 const blackOpts: PDFPageDrawTextOptions = { color: rgb(0, 0, 0), blendMode: BlendMode.Multiply };
 
-export default async function generateCertificate(title: string|string[], name: string|string[]) {
+export default async function generateCertificate(title: string | string[], name: string | string[]) {
     const pdfDoc = await PDFDocument.create();
     pdfDoc.registerFontkit(fontkit);
     const page = pdfDoc.addPage([PageSizes.A4[1], PageSizes.A4[0]]); // A4 landscape
@@ -143,7 +143,7 @@ export default async function generateCertificate(title: string|string[], name: 
         fitTextWithinRect(page, font, bottomRect, bottomStr, true, { ...blackOpts, size: blackTextFontSize }, Alignment.LEADING);
 
     }
-    return pdfDoc.saveAsBase64({ dataUri: true });
+    return pdfDoc.save();
 }
 
 // Derived from https://gist.github.com/JustAnotherJavaProgrammer/daf36211f1f53fb4ce723becb94b361f
@@ -165,4 +165,36 @@ function percentageRect(page: PDFPage, rect: Rectangle): Rectangle {
     const pageHeight = page.getHeight();
     const rectHeight = pageHeight * rect.height / 100;
     return { x: pageWidth * rect.x / 100, y: pageHeight - (pageHeight * rect.y / 100) - rectHeight, width: pageWidth * rect.width / 100, height: rectHeight };
+}
+
+export type PdfResponse = {
+    type: "success";
+    pdf: Uint8Array;
+} | {
+    type: "error";
+    message: string;
+}
+
+// @ts-expect-error
+if (typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope) {
+    // Running in worker
+    self.addEventListener("message", async (event) => {
+        console.log("Received message", event);
+        if(event.data === "ping") {
+            self.postMessage("pong");
+        }
+        const { title, name } = event.data;
+        const pdf = await generateCertificate(title, name);
+        try {
+            self.postMessage({ type: "success", pdf } as PdfResponse, { transfer: [pdf.buffer]});
+        } catch (e: Error|unknown) {
+            try {
+            self.postMessage({ type: "error", message: (e as Error).message ?? e } as PdfResponse);
+            } catch (e: unknown) {
+                console.error(e);
+                self.postMessage({ type: "error", message: "Unknown error, something went terribly wrong." } as PdfResponse);
+            }
+        }
+        console.log("Message handled");
+    });
 }
