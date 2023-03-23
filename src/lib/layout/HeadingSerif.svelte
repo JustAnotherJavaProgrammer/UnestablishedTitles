@@ -8,7 +8,7 @@
     @import "/src/styles.scss";
     h1 {
         @include font-heading-serif;
-        font-size: 2em;
+        font-size: 2rem;
         max-width: clamp(370px, 66.66vw, 680px)
     }
 

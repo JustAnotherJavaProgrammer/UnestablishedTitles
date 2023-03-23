@@ -58,7 +58,7 @@
         align-items: center;
         margin-left: 1rem;
         font-size: 1.175rem;
-        letter-spacing: 0.075em;
+        letter-spacing: 0.075rem;
         gap: 2rem;
     }
 

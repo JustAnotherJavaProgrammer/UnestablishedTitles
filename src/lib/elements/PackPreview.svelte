@@ -53,7 +53,7 @@
     }
 
     section {
-        padding: 2em;
+        padding: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -22,7 +22,7 @@
         top: 0;
         z-index: 100;
         font-weight: bold;
-        padding: 0.5em;
+        padding: 0.5rem;
         text-align: center;
         text-decoration: none;
     }

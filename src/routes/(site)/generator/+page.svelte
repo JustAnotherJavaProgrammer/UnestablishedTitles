@@ -6,6 +6,7 @@
     import PackSizeChooser from "$lib/generator/PackSizeChooser.svelte";
     import TitleSelectionGroup from "$lib/generator/TitleSelectionGroup.svelte";
     import HeadingSerif from "$lib/layout/HeadingSerif.svelte";
+    import ParagraphSerif from "$lib/layout/ParagraphSerif.svelte";
     import packInfo from "$lib/packs";
 
     function triggerGeneration(): Promise<Uint8Array> {
@@ -110,6 +111,11 @@
             You can download your certificate by clicking on the button below.
         </div>
         <button type="button" on:click={downloadPdf}>Download certificate</button>
+        <div class="message">
+            <ParagraphSerif>
+                <svelte:fragment slot="title">Do you like this site?</svelte:fragment>
+            </ParagraphSerif>
+        </div>
     {/if}
 </div>
 

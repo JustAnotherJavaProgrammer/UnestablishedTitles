@@ -36,7 +36,7 @@ const options = packInfo.map((pack) => pack.title).filter((title) => title !== n
 
         &:focus {
             // border-color: $green;
-            outline: 0.1em solid $grey;
+            outline: 0.1rem solid $grey;
         }
     }
 </style>

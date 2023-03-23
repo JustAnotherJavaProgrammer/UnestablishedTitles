@@ -52,15 +52,15 @@
     }
 
     h1 {
-        font-size: 4em;
+        font-size: 4rem;
         margin: 0;
     }
 
     p {
-        margin: 1em;
-        font-size: 1.75em;
+        margin: 1rem;
+        font-size: 1.75rem;
         @include font-display-sans;
-        letter-spacing: 0.075em;
+        letter-spacing: 0.075rem;
         text-transform: uppercase;
     }
 
