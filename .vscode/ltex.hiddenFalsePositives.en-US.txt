@@ -1,0 +1,3 @@
+{"rule":"AI_EN_LECTOR_REPLACEMENT_VERB_AGREEMENT","sentence":"^\\QUnestablished Titles makes that possible!\\E$"}
+{"rule":"AI_EN_LECTOR_REPLACEMENT_VERB_AGREEMENT","sentence":"^\\QUnestablished Titles has some major advantages\\E$"}
+{"rule":"AI_EN_LECTOR_REPLACEMENT_VERB_AGREEMENT","sentence":"^\\QUnestablished Titles only gets you the certificate without the illusion of owning land for a stupidly high price.\\E$"}
