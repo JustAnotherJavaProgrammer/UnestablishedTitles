@@ -10,6 +10,7 @@
         @include font-heading-serif;
         font-size: 2rem;
         max-width: clamp(370px, 66.66vw, 680px)
+        text-align: center;
     }
 
     :global(h1) {
