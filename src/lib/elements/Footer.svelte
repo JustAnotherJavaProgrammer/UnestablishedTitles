@@ -4,24 +4,26 @@
 </script>
 
 <footer>
-    <div class="content-column">
-        <FooterSection links={[
-            {text: "Home", href: "/"},
-            {text: "All Packs", href: "/packs"},
-            {text: "Generate certificates", href: "/generator"},
-            {text: "FAQ", href: "/faq"},
-            {text: "Credits", href: "/legal/credits"},
-        ]} ><svelte:fragment slot="title">Quick links</svelte:fragment></FooterSection>
+    <nav class="content-column">
+        <FooterSection
+            links={[
+                { text: "Home", href: "/" },
+                { text: "All Packs", href: "/packs" },
+                { text: "Generate certificates", href: "/generator" },
+                { text: "FAQ", href: "/faq" },
+                { text: "Credits", href: "/legal/credits" },
+            ]}><svelte:fragment slot="title">Quick links</svelte:fragment></FooterSection
+        >
         <FooterSection
             links={[
                 { text: "Imprint", href: "/legal/imprint" },
                 { text: "Privacy Policy", href: "/legal/privacypolicy" },
                 { text: "Impressum", href: "/legal/impressum" },
                 { text: "Datenschutzerklärung", href: "/legal/datenschutzerklaerung" },
-                { text: "Source code on GitHub", href: "https://github.com/JustAnotherJavaProgrammer/UnestablishedTitles"}
+                { text: "Source code on GitHub", href: "https://github.com/JustAnotherJavaProgrammer/UnestablishedTitles" },
             ]}><svelte:fragment slot="title">Legal</svelte:fragment></FooterSection
         >
-    </div>
+    </nav>
 </footer>
 
 <style lang="scss">
@@ -46,6 +48,7 @@
         max-width: $max-content-width;
         width: 100%;
         padding: 1rem;
+        margin: 0;
         gap: 1rem;
         box-sizing: border-box;
 

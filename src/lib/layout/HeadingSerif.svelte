@@ -9,7 +9,7 @@
     h1 {
         @include font-heading-serif;
         font-size: 2rem;
-        max-width: clamp(370px, 66.66vw, 680px)
+        max-width: clamp(370px, 66.66vw, 680px);
         text-align: center;
     }
 
