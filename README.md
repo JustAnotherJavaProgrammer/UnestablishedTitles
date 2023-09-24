@@ -24,4 +24,4 @@ For couples, any two of these titles can be combined on one certificate.
 - **Quick:** Certificates are generated within seconds and can be downloaded directly. That makes them the ideal addition to a last-minute gift.
 - **Free as in open-source:** Most similar services don't allow you to look at what's going on under the hood. *Unestablished Titles* lets you look at the source code.
 
-I hope that makes it clear, why *Unestablished Titles* makes it the better option.
+I hope that makes it clear why *Unestablished Titles* is the better option.
